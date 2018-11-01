@@ -7,7 +7,7 @@
     .button {
         @include small_shadow();
         border: black;
-        border-radius: 2px;
+        @include small_border_radius();
         padding: 2rem 3rem;
         display: inline-flex;
         flex-direction: column;
@@ -23,7 +23,15 @@
     }
 
     // Blog button
-    .secondary_button {}
+    .secondary_button {
+        background-color: transparent;
+        color: $color_text_default; 
+        font-size: $font_slightly_smaller;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        @include tiny_shadow();
+        border: 1px solid $color_text_default;
+    }
 
     // Load more comments
     .tertiary_button {}

@@ -1,4 +1,5 @@
-.slideshow, .slideshow_full_screen {
+.slideshow,
+.slideshow_full_screen {
     position: relative;
 }
 
@@ -34,6 +35,7 @@
     width: 100%;
     object-position: center center;
     text-align: center;
+    @include small_border_radius_top();
 }
 
 .arrow {
@@ -41,11 +43,12 @@
     height: 5rem;
     width: 5rem;
     object-position: center center;
-    margin: auto;    
+    margin: auto;
     opacity: .8;
 }
 
-.arrow_left, .arrow_right {
+.arrow_left,
+.arrow_right {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -57,4 +60,34 @@
 
 .arrow_right {
     right: -2rem;
+}
+
+.slideshow_caption {
+    @include small_shadow();
+    border: black;
+    @include small_border_radius_bottom();
+    padding: 2rem 3rem;
+    display: block;
+    flex-direction: column;
+    background-color: $main_color;
+    color: $color_lightest;
+
+    text-transform: uppercase;
+
+    .top, .bottom {
+        display: block;
+        text-align: center;
+    }
+
+    .top {
+        font-size: $font_bigger;
+        letter-spacing: .4rem;
+        margin-bottom: 2rem;
+    }
+
+    .bottom {
+        font-size: $font_bigger;
+        font-weight: 300;
+        letter-spacing: .1rem;
+    }
 }
