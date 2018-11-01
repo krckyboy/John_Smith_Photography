@@ -1,0 +1,33 @@
+.button_container {
+
+    display: flex;
+    justify-content: center;
+
+    // Styling all a tags to look like buttons
+    .button {
+        @include small_shadow();
+        border: black;
+        border-radius: 2px;
+        padding: 2rem 3rem;
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    // See all projects
+    .primary_button {
+        background-color: $main_color;
+        color: $color_lightest;
+        font-size: $font_bigger;
+        text-transform: uppercase;
+
+    }
+
+    // Blog button
+    .secondary_button {}
+
+    // Load more comments
+    .tertiary_button {}
+
+    // Show more for a comment
+    .quaternary_button {}
+}
