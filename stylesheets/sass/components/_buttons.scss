@@ -1,9 +1,8 @@
-.button_container {
-
+// Styles for a tags to look like buttons
+.button-like_container {
     display: flex;
     justify-content: center;
 
-    // Styling all a tags to look like buttons
     .button {
         @include small_shadow();
         border: black;
@@ -25,7 +24,7 @@
     // Blog button
     .secondary_button {
         background-color: transparent;
-        color: $color_text_default; 
+        color: $color_text_default;
         font-size: $font_slightly_smaller;
         text-transform: uppercase;
         padding: 1rem 2rem;
@@ -38,4 +37,29 @@
 
     // Show more for a comment
     .quaternary_button {}
+}
+
+// Styles for real buttons
+.btn_button {
+    @include small_shadow();
+    @include small_border_radius();
+    align-self: baseline;
+    margin-left: auto;
+    margin-right: auto;
+    border: black;
+    padding: 2rem 8rem;
+    display: inline-block;
+    align-items: center;
+    flex-direction: column;
+    background-color: $main_color;
+    color: $color_lightest;
+    font-size: $font_bigger;
+    text-transform: uppercase;
+    font-weight: 400;
+    
+    &:focus{
+        color: $color_text_default;
+        outline: none;
+        border: none;
+    }
 }

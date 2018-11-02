@@ -2,17 +2,19 @@
 @import "utils/mixins";
 
 @import "base/main_reset";  
-@import "base/custom_reset"; 
 @import "base/typography";
+@import "base/global";
 
 @import "layout/header";     
 @import "layout/global";     
+@import "layout/footer";     
 
 @import "pages/home";
 
 @import "components/slideshow";
 @import "components/buttons"; 
 @import "components/blog_thumbnail";
+@import "components/form";
 
          
                             

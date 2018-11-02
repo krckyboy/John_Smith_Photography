@@ -1,0 +1,30 @@
+.footer {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: .5rem;
+        border-top: .24rem solid $main_color;
+        top: 10%;
+        width: 30rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social_icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        margin: 0 auto;
+        span {
+            display: inline-block;
+            a {
+                img {
+                    height: 3rem;
+                    width: 3rem;
+                }
+            }
+        }
+    }
+} 

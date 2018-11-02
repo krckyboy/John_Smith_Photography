@@ -7,6 +7,22 @@ body {
     color: $color_text_default;
 }
 
+input, textarea {
+    @include placeholder() {
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+button {
+    font-family: 'Quicksand', sans-serif;
+}
+
+a {
+    cursor: pointer;
+}
+
 .section_heading {
     position: relative;
     font-size: 2.7rem;
@@ -109,5 +125,26 @@ body {
                 font-size: $font_common;
             }
         }
+    }
+}
+
+.contact {
+    .contact_text {
+        font-size: $font_slightly_bigger;
+        text-align: center;
+    }
+}
+
+.footer {
+    font-size: $font_slightly_smaller;
+    text-align: center;
+
+    .author {
+        color: $main_color;
+        font-weight: 500;
+    } 
+
+    .footer_text {
+        display: block;
     }
 }

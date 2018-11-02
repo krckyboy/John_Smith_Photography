@@ -1,0 +1,27 @@
+.form {
+
+    display: flex;
+    flex-direction: column;
+
+    .input,
+    .textarea {
+        outline: none;
+        border: 1px solid $color_lighter;
+        @include small_border_radius();
+
+        @include placeholder {
+            font-size: $font_common;
+        }
+
+    }
+
+
+
+    .input {
+        margin-bottom: $margin_bottom_medium;
+    }
+
+    .textarea {}
+
+
+}

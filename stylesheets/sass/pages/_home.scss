@@ -136,7 +136,7 @@
             text-align: center;
 
             &:not(:last-child) {
-                margin-bottom: 2rem;
+                margin-bottom: $margin_bottom_medium;
             }
 
             .top {
