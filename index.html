@@ -14,7 +14,7 @@
     <div class="app">
         <div class="hero">
             <header class="header">
-                <div class="header_container">
+                <div class="header_container container_common">
                     <div class="logoContainer">
                         <span class="logo">
                             <img class="logo_image" src="images/logo.svg" alt="Logo - John Smith Photography">
@@ -47,67 +47,76 @@
         </div>
 
         <section class="about padding_common">
-            <img class="about_img_1" src="images/black-and-white-fun-happy-91227.jpg" alt="Picture of me smiling, grayscale.">
-            <div class="padding_common_left_right">
-                <div class="about_1 padding_bigger">
-                    <div class="about_heading margin_common_bottom">
-                        <h2>About #1</h2>
-                    </div>
-                    <div class="about_text">
-                        <p>Hi! I'm John Smith from Houston, Texas and I'm 23 years old. My work, love and passion is
-                            photography. What I like to do the most is travel and make amazing photographs.</p>
+            <div class="container_common">
+                <img class="about_img_1" src="images/black-and-white-fun-happy-91227.jpg" alt="Picture of me smiling, grayscale.">
+                <div class="padding_common_left_right">
+                    <div class="about_1 padding_bigger">
+                        <div class="about_heading margin_common_bottom">
+                            <h2>About #1</h2>
+                        </div>
+                        <div class="about_text">
+                            <p>Hi! I'm John Smith from Houston, Texas and I'm 23 years old. My work, love and passion
+                                is
+                                photography. What I like to do the most is travel and make amazing photographs.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <img class="about_img_2" src="images/adult-back-view-beach-962290.jpg" alt="Picture of me taking a photo in the sunset.">
-            <div class="padding_common_left_right">
-                <div class="about_2 padding_bigger">
-                    <div class="about_heading margin_common_bottom">
-                        <h2>About #2</h2>
-                    </div>
-                    <div class="about_text">
-                        <p>I put my energy into providing the best possible photographs to my clients in an array of
-                            formats. I'm available 24/7 and for every gig that I accept, I take very seriously and push
-                            myself to
-                            the limit.</p>
+                <img class="about_img_2" src="images/adult-back-view-beach-962290.jpg" alt="Picture of me taking a photo in the sunset.">
+                <div class="padding_common_left_right">
+                    <div class="about_2 padding_bigger">
+                        <div class="about_heading margin_common_bottom">
+                            <h2>About #2</h2>
+                        </div>
+                        <div class="about_text">
+                            <p>I put my energy into providing the best possible photographs to my clients in an array
+                                of
+                                formats. I'm available 24/7 and for every gig that I accept, I take very seriously and
+                                push
+                                myself to
+                                the limit.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="my_services padding_common">
-            <h2 class="section_heading padding_bigger">My Services</h2>
-            <div class="services_container">
-                <div class="service_container">
-                    <div class="icon_container">
-                        <img src="images/photo-camera.svg" alt="Photo shooting icon.">
+            <div class="container_common">
+                <h2 class="section_heading padding_bigger">My Services</h2>
+                <div class="services_container container_common">
+                    <div class="service_container">
+                        <div class="icon_container">
+                            <img src="images/photo-camera.svg" alt="Photo shooting icon.">
+                        </div>
+                        <h3 class="service_heading">PHOTO SHOOTING</h3>
+                        <p class="service_text">Photo shooting either on-site or in-studio. I do portrait, corporate,
+                            event, architectural, and of course landscape photography.
+                        </p>
                     </div>
-                    <h3 class="service_heading">PHOTO SHOOTING</h3>
-                    <p class="service_text">Photo shooting either on-site or in-studio. I do portrait, corporate,
-                        event, architectural, and of course landscape photography.
-                    </p>
-                </div>
-                <div class="service_container">
-                    <div class="icon_container">
-                        <img src="images/image.svg" alt="Editing icon.">
+                    <div class="service_container">
+                        <div class="icon_container">
+                            <img src="images/image.svg" alt="Editing icon.">
+                        </div>
+                        <h3 class="service_heading">EDITING</h3>
+                        <p class="service_text">Editing photographs in a high-end software that either a photographer of
+                            your choice or myself made.
+                        </p>
                     </div>
-                    <h3 class="service_heading">EDITING</h3>
-                    <p class="service_text">Editing photographs in a high-end software that either a photographer of
-                        your choice or myself made.
-                    </p>
+                    <div class="service_container">
+    
+                        <div class="icon_container">
+                            <img src="images/printer.svg" alt="Printing icon.">
+                        </div>
+                        <h3 class="service_heading">PRINTING</h3>
+                        <p class="service_text">Printing individuals photographs or series in the form of a book or album
+                            of photos that you select.
+                        </p>
+                    </div>
                 </div>
-                <div class="service_container">
 
-                    <div class="icon_container">
-                        <img src="images/printer.svg" alt="Printing icon.">
-                    </div>
-                    <h3 class="service_heading">PRINTING</h3>
-                    <p class="service_text">Printing individuals photographs or series in the form of a book or album
-                        of photos that you select.
-                    </p>
-                </div>
             </div>
+
         </section>
 
         <section class="work padding_common">
@@ -248,17 +257,17 @@
             <p class="contact_text">If you're interested in hiring me or if you'd like to ask questions, don't hesitate
                 and use the form below to reach out to me. I'm very responsive to e-mails so I'll make sure to get back
                 to you as soon as possible!</p>
-                <form action="#" class="form padding_medium_top_bottom">
-                    <input type="text" placeholder="NAME" class="padding_common input">
-                    <input type="email" placeholder="E-MAIL" class="padding_common input">
-                    <textarea name="contact_message" id="contact_message" cols="30" rows="10" placeholder="MESSAGE" class="padding_common textarea"></textarea>
-                    <button class="btn_button margin_top_bigger">SEND IT!</button>
-                </form>
+            <form action="#" class="form padding_medium_top_bottom">
+                <input type="text" placeholder="NAME" class="padding_common input">
+                <input type="email" placeholder="E-MAIL" class="padding_common input">
+                <textarea name="contact_message" id="contact_message" cols="30" rows="10" placeholder="MESSAGE" class="padding_common textarea"></textarea>
+                <button class="btn_button margin_top_bigger">SEND IT!</button>
+            </form>
         </section>
- 
+
         <footer class="padding_common footer padding_top_bigger">
             <span class="footer_text padding_common_top_bottom">
-                	&copy; 2018 <span class="author">DUSAN TODOROVIC</span> ALL RIGHTS RESERVED
+                &copy; 2018 <span class="author">DUSAN TODOROVIC</span> ALL RIGHTS RESERVED
             </span>
             <div class="social_icons padding_common_top_bottom">
                 <span class="facebook_logo">

@@ -230,6 +230,10 @@ a {
   margin-top: 6rem;
   margin-bottom: 6rem; }
 
+.container_common {
+  max-width: 86rem;
+  margin: 0 auto; }
+
 .footer {
   position: relative; }
   .footer::before {
@@ -245,7 +249,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 30%;
+    width: 10rem;
     margin: 0 auto; }
     .footer .social_icons span {
       display: inline-block; }
