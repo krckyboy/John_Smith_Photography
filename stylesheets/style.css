@@ -276,8 +276,7 @@ a {
         width: 3rem; }
 
 .hero {
-  background: url("../images/home_hero1.jpg");
-  background: linear-gradient(154deg, rgba(229, 75, 75, 0.1) 40%, rgba(229, 75, 75, 0.4) 81%), url("../images/home_hero.jpg");
+  background: linear-gradient(154deg, rgba(229, 75, 75, 0.1) 40%, rgba(229, 75, 75, 0.4) 81%), url("../images/home_hero1.jpg");
   background-size: cover;
   min-height: 100vh;
   background-position: left center;
