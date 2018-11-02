@@ -124,7 +124,7 @@
 
         .studio_box {
             width: 80%; 
-            @include small_shadow();
+            @include tiny_shadow();
             border: black;
             @include small_border_radius();
             padding: 3rem 3rem;

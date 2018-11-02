@@ -144,14 +144,26 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 0 1.2rem; }
-  .header_hamburger, .header .logoContainer {
+  .header_hamburger,
+  .header .logoContainer {
     display: inline-block; }
-  .header_hamburger .bar1, .header .bar2, .header .bar3 {
-    width: 4rem;
-    height: .23rem;
-    background-color: #EEE;
-    margin: .7rem 0;
-    transition: .4s; }
+  .header_hamburger {
+    cursor: pointer; }
+    .header_hamburger.active .bar:nth-child(1) {
+      opacity: 0; }
+    .header_hamburger.active .bar:nth-child(2) {
+      transform: rotate(45deg); }
+    .header_hamburger.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(0.6rem, -0.7rem); }
+    .header_hamburger.inactive:hover .bar {
+      animation: nudge_up_down_slightly .3s linear;
+      pointer-events: none; }
+    .header_hamburger .bar {
+      width: 3rem;
+      height: .23rem;
+      background-color: #EEE;
+      margin: .7rem 0;
+      transition: .5s opacity, 1s transform; }
   .header .logoContainer {
     display: flex;
     flex-direction: column;
@@ -340,7 +352,7 @@ a {
   height: 40rem; }
   .studio .studio_boxes .studio_box {
     width: 80%;
-    box-shadow: 0 3px 5px lightgray;
+    box-shadow: 0 2px 5px lightgray;
     border: black;
     border-radius: 4px;
     padding: 3rem 3rem;
@@ -442,7 +454,6 @@ a {
   display: flex;
   justify-content: center; }
   .button-like_container .button {
-    box-shadow: 0 3px 5px lightgray;
     border: black;
     border-radius: 4px;
     padding: 2rem 3rem;
@@ -452,18 +463,18 @@ a {
     background-color: #E54B4B;
     color: white;
     font-size: 1.9rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px lightgray; }
   .button-like_container .secondary_button {
     background-color: transparent;
     color: #4E4E4E;
     font-size: 1.4rem;
     text-transform: uppercase;
     padding: 1rem 2rem;
-    box-shadow: 0 2px 5px lightgray;
     border: 1px solid #4E4E4E; }
 
 .btn_button {
-  box-shadow: 0 3px 5px lightgray;
+  box-shadow: 0 2px 5px lightgray;
   border-radius: 4px;
   align-self: baseline;
   margin-left: auto;
@@ -525,3 +536,11 @@ a {
       font-size: 1.5rem; }
   .form .input {
     margin-bottom: 2rem; }
+
+@keyframes nudge_up_down_slightly {
+  0% {
+    transform: translateY(0.5rem); }
+  50% {
+    transform: translateY(-0.5rem); }
+  100% {
+    transform: translateY(0); } }

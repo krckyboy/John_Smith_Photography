@@ -17,16 +17,43 @@
         padding: 0 1.2rem;
     }
 
-    &_hamburger, & .logoContainer {
+    &_hamburger,
+    & .logoContainer {
         display: inline-block;
     }
 
-    &_hamburger .bar1, .bar2, .bar3 {
-        width: 4rem;
-        height: .23rem;
-        background-color: $color_light;
-        margin: .7rem 0;
-        transition: .4s;
+    &_hamburger {
+        cursor: pointer;
+
+        &.active {
+
+            .bar:nth-child(1) {
+                opacity: 0;
+            }
+            
+            .bar:nth-child(2) {
+                transform: rotate(45deg);
+            }
+            
+            .bar:nth-child(3) {
+                transform: rotate(-45deg) translate(.6rem, -.7rem);
+            }
+        }
+
+        &.inactive:hover {
+            .bar {
+                animation: nudge_up_down_slightly .3s linear;
+                pointer-events: none; // to avoid event target conflict
+            }
+        }
+
+        .bar {
+            width: 3rem;
+            height: .23rem;
+            background-color: $color_light;
+            margin: .7rem 0;
+            transition: .5s opacity, 1s transform;
+        }
     }
 
     & .logoContainer {
@@ -40,11 +67,9 @@
                 max-height: 4rem;
             }
         }
-    } 
+    }
 
     & .nav {
         display: none;
     }
 }
-
-

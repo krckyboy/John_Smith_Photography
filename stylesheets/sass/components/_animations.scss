@@ -1,0 +1,11 @@
+@keyframes nudge_up_down_slightly {
+    0% {
+        transform: translateY(.5rem);
+    }
+    50% {
+        transform: translateY(-.5rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

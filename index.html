@@ -12,29 +12,29 @@
 
 <body>
     <div class="app">
-        <div class="hero">
-            <header class="header">
-                <div class="header_container container_common">
-                    <div class="logoContainer">
-                        <span class="logo">
-                            <img class="logo_image" src="images/logo.svg" alt="Logo - John Smith Photography">
-                        </span>
-                    </div>
-                    <div class="header_hamburger">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-
-                    <nav class="nav">
-                        <ul class="nav_ul">
-                            <li class="nav_active">Home</li>
-                            <li>Projects</li>
-                            <li>Blog</li>
-                        </ul>
-                    </nav>
+        <header class="header">
+            <div class="header_container container_common">
+                <div class="logoContainer">
+                    <span class="logo">
+                        <img class="logo_image" src="images/logo.svg" alt="Logo - John Smith Photography">
+                    </span>
                 </div>
-            </header>
+                <div class="header_hamburger inactive" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav_ul">
+                        <li class="nav_active">Home</li>
+                        <li>Projects</li>
+                        <li>Blog</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="hero">
 
             <div class="hero_headline-container">
                 <h1>
@@ -99,17 +99,19 @@
                             <img src="images/image.svg" alt="Editing icon.">
                         </div>
                         <h3 class="service_heading">EDITING</h3>
-                        <p class="service_text">Editing photographs in a high-end software that either a photographer of
+                        <p class="service_text">Editing photographs in a high-end software that either a photographer
+                            of
                             your choice or myself made.
                         </p>
                     </div>
                     <div class="service_container">
-    
+
                         <div class="icon_container">
                             <img src="images/printer.svg" alt="Printing icon.">
                         </div>
                         <h3 class="service_heading">PRINTING</h3>
-                        <p class="service_text">Printing individuals photographs or series in the form of a book or album
+                        <p class="service_text">Printing individuals photographs or series in the form of a book or
+                            album
                             of photos that you select.
                         </p>
                     </div>
@@ -283,6 +285,7 @@
             </div>
         </footer>
     </div>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
