@@ -80,7 +80,7 @@ a {
   color: white; }
   .hero .hero_headline-container h1 .hero_heading-top {
     font-size: 4.6rem;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase; }
   .hero .hero_headline-container h1 .hero_heading-bottom {
     text-align: right;
@@ -127,6 +127,12 @@ a {
     font-weight: 500; }
   .footer .footer_text {
     display: block; }
+
+.faded {
+  opacity: 0; }
+
+.visible {
+  opacity: 1; }
 
 .header {
   height: 60px;
@@ -270,17 +276,20 @@ a {
         width: 3rem; }
 
 .hero {
-  background: url("../images/home_hero.jpg");
+  background: url("../images/home_hero1.jpg");
+  background: linear-gradient(154deg, rgba(229, 75, 75, 0.1) 40%, rgba(229, 75, 75, 0.4) 81%), url("../images/home_hero.jpg");
   background-size: cover;
   min-height: 100vh;
-  background-position: center;
+  background-position: left center;
   position: relative; }
   .hero .arrow-down {
     position: absolute;
+    display: inline-block;
     bottom: 2rem;
     left: 50%;
-    width: 5rem;
-    transform: translateX(-50%); }
+    width: 4rem;
+    transform: translateX(-50%);
+    animation: nudge_up_down_hero_arrow  2s infinite; }
   .hero .hero_headline-container {
     position: absolute;
     top: 40%;
@@ -289,9 +298,12 @@ a {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(105deg, rgba(229, 75, 75, 0.9) 0%, rgba(229, 75, 75, 0.9) 10%, transparent 100%); }
+    align-items: center;
+    height: 20rem; }
     .hero .hero_headline-container h1 {
-      padding: 3rem 2rem; }
+      transition: opacity 1s;
+      padding: 3rem 2rem;
+      margin: auto; }
 
 .about {
   background-color: #D4D4D4;
@@ -544,3 +556,37 @@ a {
     transform: translateY(-0.5rem); }
   100% {
     transform: translateY(0); } }
+
+@keyframes nudge_up_down_hero_arrow {
+  0%, 100% {
+    transform: translateY(0) translateX(-50%); }
+  50% {
+    transform: translateY(1rem) translateX(-50%); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }

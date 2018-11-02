@@ -1,16 +1,23 @@
 .hero {
-    background: url("../images/home_hero.jpg");
+    background: url("../images/home_hero1.jpg");
+    background:
+        linear-gradient(154deg, rgba($main_color, 0.1) 40%, rgba($main_color, 0.4) 81%),
+        url("../images/home_hero.jpg");
+
+    
     background-size: cover;
     min-height: 100vh;
-    background-position: center;
+    background-position: left center;
     position: relative;
 
     & .arrow-down {
         position: absolute;
+        display: inline-block;
         bottom: 2rem;
         left: 50%;
-        width: 5rem;
+        width: 4rem;
         transform: translateX(-50%);
+        animation: nudge_up_down_hero_arrow  2s infinite;
     }
 
     & .hero_headline-container {
@@ -21,11 +28,21 @@
         transform: translateX(-50%);
         display: flex;
         justify-content: center;
+        align-items: center;
+        height: 20rem;
+        
         // background-image: linear-gradient(to right bottom, $main_color, $main_color);
-        background-image: linear-gradient(105deg, rgba($main_color, .9) 0%, rgba($main_color, .9) 10%, transparent 100%);
+        // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        // max-width: 86rem;
+        
+        // background-image: linear-gradient(105deg, transparent 0%, rgba($main_color, .3) 40%, rgba($main_color, .5) 60%, transparent 100%);
 
-        & h1 {
+        
+        h1 {
+            // animation: moveInLeft 1s linear;
+            transition: opacity 1s;
             padding: 3rem 2rem;
+            margin: auto; 
         }
     }
 }

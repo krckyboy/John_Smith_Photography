@@ -17,4 +17,12 @@ utils.ready(function() {
             hamDOM.classList.toggle("inactive");
         })
     })()
+
+    const animations = (function() {
+        const hero_text = document.getElementById("hero_text");
+        setTimeout(() => {
+            hero_text.style.animation = "moveInLeft .5s linear";
+            hero_text.classList.remove("faded");
+        }, 1500);
+    })()
 }) 
