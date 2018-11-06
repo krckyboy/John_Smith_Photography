@@ -12,9 +12,17 @@ const utils = {
 utils.ready(function() {
     const hamburger = (function() {
         const hamDOM = document.getElementById("hamburger");
+        const mobile_nav = {
+            overlay: document.getElementById("menu_overlay"),
+            nav_items: document.getElementById("mobile_nav")
+        }
         hamDOM.addEventListener("click", (e) => {
             hamDOM.classList.toggle("active");
             hamDOM.classList.toggle("inactive");
+            mobile_nav.overlay.classList.toggle("faded");
+            mobile_nav.nav_items.classList.toggle("faded");
+            mobile_nav.overlay.classList.toggle("active");
+            mobile_nav.nav_items.classList.toggle("active");
         })
     })()
 

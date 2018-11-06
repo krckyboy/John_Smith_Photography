@@ -29,12 +29,13 @@
 
             .bar:nth-child(1) {
                 opacity: 0;
+                transform: translateY(-2rem);
             }
-            
+
             .bar:nth-child(2) {
                 transform: rotate(45deg);
             }
-            
+
             .bar:nth-child(3) {
                 transform: rotate(-45deg) translate(.6rem, -.7rem);
             }
@@ -42,7 +43,7 @@
 
         &.inactive:hover {
             .bar {
-                animation: nudge_up_down_slightly .3s linear;
+                // animation: nudge_up_down_slightly .1s linear;
                 pointer-events: none; // to avoid event target conflict
             }
         }
@@ -71,5 +72,46 @@
 
     & .nav {
         display: none;
+    }
+
+    .menu {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+
+        &_overlay {
+            content: "";
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba($main_color, .8);
+            transition: opacity .5s;
+        }
+        
+        .mobile_nav {
+            transition: all .7s;
+            position: relative;
+            @include flex_center_center;
+            transform: translateX(-5rem);
+
+            &.active {
+                transform: translateX(0);
+            }
+
+            .nav_ul {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                margin: auto;
+                height: calc(100vh - 6rem);
+                li {
+                    margin: 2rem;
+                    display: block;
+                }
+            }
+        }
     }
 }
