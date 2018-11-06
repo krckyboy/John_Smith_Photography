@@ -5,7 +5,7 @@
     align-items: center;
     position: fixed;
     width: 100%;
-    background: rgba($main_color, .9);
+    background: rgba($main_color, .95);
     padding: 0 1rem;
     z-index: 33;
 
@@ -75,6 +75,8 @@
     }
 
     .menu {
+        // temporarily
+        // display: none;
         width: 100%;
         position: absolute;
         top: 100%;
@@ -87,7 +89,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba($main_color, .8);
+            background-color: rgba($main_color, .95);
             transition: opacity .5s;
         }
         
@@ -96,8 +98,10 @@
             position: relative;
             @include flex_center_center;
             transform: translateX(-5rem);
-
+            z-index: -1;
+            
             &.active {
+                z-index: 3;
                 transform: translateX(0);
             }
 

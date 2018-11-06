@@ -1,0 +1,25 @@
+// for blogs, projects, blog posts
+.hero_common {
+    background: url("../images/blogs_hero.jpg");
+    background-size: cover;
+    min-height: 50vh;
+    background-position: left center; 
+    position: relative;
+
+    & .hero_headline-container {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12rem;
+
+        h1 {
+            transition: opacity 1s;
+            margin: auto; 
+        }
+    }
+}

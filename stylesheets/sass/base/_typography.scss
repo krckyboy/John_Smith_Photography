@@ -7,12 +7,14 @@ body {
     color: $color_text_default;
 }
 
-input, textarea {
+input,
+textarea {
     @include placeholder() {
         font-family: 'Quicksand', sans-serif;
     }
 
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand',
+    sans-serif;
 }
 
 button {
@@ -49,16 +51,26 @@ a {
     }
 
     .nav {
-        & li {
+        li {
             font-size: 2rem;
+
+            &.nav_active {
+                color: $color_dark;
+        }
         }
     }
-
+    
     .mobile_nav {
         li {
+            color: $color_light;
             text-transform: uppercase;
             font-size: 3rem;
+            letter-spacing: .3rem;
             text-align: left;
+
+            &.nav_active {
+                    color: $color_dark;
+            }
         }
     }
 }
@@ -79,6 +91,32 @@ a {
                 font-size: 1.4rem;
                 font-weight: 500;
 
+            }
+        }
+    }
+}
+
+.hero_common {
+    & .hero_headline-container {
+        color: $color_lightest;
+        background-color: rgba($main_color, .8);
+
+        & h1 {
+
+            .hero_heading-top,
+            .hero_heading-bottom {
+                text-align: center;
+            }
+
+            .hero_heading-top {
+                font-size: 2.6rem;
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+
+            .hero_heading-bottom {
+                font-size: 1.4rem;
+                font-weight: 500;
             }
         }
     }
@@ -121,7 +159,7 @@ a {
 
         .post_text {
             font-size: $font_common;
-        } 
+        }
 
         .box_footer {
             .post_date {
@@ -145,9 +183,5 @@ a {
     .author {
         color: $main_color;
         font-weight: 500;
-    } 
-
-    .footer_text {
-        display: block;
     }
 }

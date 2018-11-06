@@ -1,0 +1,38 @@
+.sidebar {
+    
+    &_arrow {
+        display: flex;
+        flex-direction: column;
+        opacity: .8;
+
+        img {
+            // display: flex;
+            max-width: 2rem;
+        }
+    }
+    .sidebar_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .sidebar_text {
+            align-self: center;
+            margin-left: .5rem;
+        }
+
+        .sidebar_left, .sidebar_right {
+            display: flex;
+            justify-content: center;
+            color: $main_color;
+            font-size: $font_slightly_bigger;
+        }
+
+        .sidebar_left {
+
+        }
+
+        .sidebar_right {
+
+        }
+    }
+}

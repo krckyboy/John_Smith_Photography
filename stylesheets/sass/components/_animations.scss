@@ -20,6 +20,21 @@
     }
 }
 
+// On hover, for example, for those arrows to implicate that they're interactive.
+@keyframes rotateSlightly {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    
+    50% {
+        transform: rotate(20deg);
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+}
+
 // From Jonas
 
 @keyframes moveInLeft {
