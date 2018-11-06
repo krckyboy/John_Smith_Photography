@@ -21,10 +21,15 @@
         }
 
         .sidebar_left, .sidebar_right {
-            display: flex;
-            justify-content: center;
-            color: $main_color;
-            font-size: $font_slightly_bigger;
+            a {
+                font-size: $font_slightly_bigger;
+                color: $main_color;
+                display: flex;
+                justify-content: center; 
+                span, img {
+                    pointer-events: none; // to avoid event target conflict
+                }
+            }
         }
 
         .sidebar_left {

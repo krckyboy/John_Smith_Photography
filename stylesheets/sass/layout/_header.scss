@@ -7,7 +7,7 @@
     width: 100%;
     background: rgba($main_color, .95);
     padding: 0 1rem;
-    z-index: 33;
+    z-index: 333;
 
     & .header_container {
         width: 100%;
@@ -26,24 +26,11 @@
         cursor: pointer;
 
         &.active {
-
-            .bar:nth-child(1) {
-                opacity: 0;
-                transform: translateY(-2rem);
-            }
-
-            .bar:nth-child(2) {
-                transform: rotate(45deg);
-            }
-
-            .bar:nth-child(3) {
-                transform: rotate(-45deg) translate(.6rem, -.7rem);
-            }
+            @include hamburger_transform_to_cross;
         }
 
         &.inactive:hover {
             .bar {
-                // animation: nudge_up_down_slightly .1s linear;
                 pointer-events: none; // to avoid event target conflict
             }
         }
@@ -75,11 +62,10 @@
     }
 
     .menu {
-        // temporarily
-        // display: none;
         width: 100%;
         position: absolute;
         top: 100%;
+        transition: transform .5s;
 
         &_overlay {
             content: "";

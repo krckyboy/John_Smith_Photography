@@ -5,3 +5,15 @@
 .visible {
     opacity: 1;
 }
+
+.translate_away {
+    transform: translateX(-100%);
+}
+
+.translate_to_default {
+    transform: translateX(0);
+}
+
+.hamburger_transform_to_cross {
+    @include hamburger_transform_to_cross;
+}

@@ -161,6 +161,22 @@ a {
 .visible {
   opacity: 1; }
 
+.translate_away {
+  transform: translateX(-100%); }
+
+.translate_to_default {
+  transform: translateX(0); }
+
+.hamburger_transform_to_cross .bar:nth-child(1) {
+  opacity: 0;
+  transform: translateY(-2rem); }
+
+.hamburger_transform_to_cross .bar:nth-child(2) {
+  transform: rotate(45deg); }
+
+.hamburger_transform_to_cross .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(0.6rem, -0.7rem); }
+
 .header {
   height: 60px;
   display: flex;
@@ -170,7 +186,7 @@ a {
   width: 100%;
   background: rgba(229, 75, 75, 0.95);
   padding: 0 1rem;
-  z-index: 33; }
+  z-index: 333; }
   .header .header_container {
     width: 100%;
     display: flex;
@@ -209,7 +225,8 @@ a {
   .header .menu {
     width: 100%;
     position: absolute;
-    top: 100%; }
+    top: 100%;
+    transition: transform .5s; }
     .header .menu_overlay {
       content: "";
       display: block;
@@ -477,6 +494,48 @@ a {
   align-items: center;
   margin: auto; }
 
+.cat_menu,
+.arch_menu {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  transition: transform .5s; }
+  .cat_menu_overlay,
+  .arch_menu_overlay {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(229, 75, 75, 0.95);
+    transition: opacity .5s; }
+  .cat_menu .mobile_nav,
+  .arch_menu .mobile_nav {
+    transition: all .7s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-5rem);
+    z-index: -1; }
+    .cat_menu .mobile_nav.active,
+    .arch_menu .mobile_nav.active {
+      z-index: 3;
+      transform: translateX(0); }
+    .cat_menu .mobile_nav .nav_ul,
+    .arch_menu .mobile_nav .nav_ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: auto;
+      height: calc(100vh - 6rem); }
+      .cat_menu .mobile_nav .nav_ul li,
+      .arch_menu .mobile_nav .nav_ul li {
+        margin: 2rem;
+        display: block; }
+
 .slideshow,
 .slideshow_full_screen {
   position: relative; }
@@ -704,8 +763,61 @@ a {
   .sidebar .sidebar_container .sidebar_text {
     align-self: center;
     margin-left: .5rem; }
-  .sidebar .sidebar_container .sidebar_left, .sidebar .sidebar_container .sidebar_right {
+  .sidebar .sidebar_container .sidebar_left a, .sidebar .sidebar_container .sidebar_right a {
+    font-size: 1.6rem;
+    color: #E54B4B;
+    display: flex;
+    justify-content: center; }
+    .sidebar .sidebar_container .sidebar_left a span, .sidebar .sidebar_container .sidebar_left a img, .sidebar .sidebar_container .sidebar_right a span, .sidebar .sidebar_container .sidebar_right a img {
+      pointer-events: none; }
+
+.overlay_fs {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  transition: all .5s;
+  transform: translateX(-100%);
+  opacity: 0;
+  background-color: rgba(229, 75, 75, 0.95); }
+  .overlay_fs.active {
+    transform: translateX(0);
+    opacity: 1; }
+  .overlay_fs_overlay {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity .5s; }
+  .overlay_fs .item_container {
+    transition: all .7s;
+    position: relative;
     display: flex;
     justify-content: center;
-    color: #E54B4B;
-    font-size: 1.6rem; }
+    align-items: center;
+    z-index: 999; }
+    .overlay_fs .item_container .heading {
+      color: #EEE;
+      margin: 1rem;
+      display: block;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      letter-spacing: .3rem;
+      text-align: left;
+      padding-left: 2rem; }
+    .overlay_fs .item_container .item_ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: auto;
+      height: 100vh; }
+      .overlay_fs .item_container .item_ul li {
+        color: #EEE;
+        margin: 1rem;
+        display: block;
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        letter-spacing: .2rem;
+        text-align: left; }

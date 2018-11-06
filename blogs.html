@@ -35,7 +35,8 @@
                     </ul>
                 </nav>
             </div>
-            <div class="menu">
+            <!-- menu -->
+            <div class="menu translate_away" id="menu">
                 <div class="menu_overlay faded" id="menu_overlay">
 
                 </div>
@@ -47,12 +48,67 @@
                         <a href="#">
                             <li>Projects</li>
                         </a>
-                        <a href="#">
-                            <li class="nav_active">Blog</li>
+                        <a href="blogs.html">
+                            <li class="nav_active"> Blog</li>
                         </a>
                     </ul>
                 </nav>
             </div>
+            <!-- /menu -->
+
+            <!-- categories "nav"-->
+            <div class="overlay_fs" id="categories_menu">
+                <div class="item_container">
+                    <h5 class="heading">
+                        Categories
+                    </h5>
+                    <ul class="item_ul">
+                        <a href="#">
+                            <li>Photography</li>
+                        </a>
+                        <a href="#">
+                            <li>Business</li>
+                        </a>
+                        <a href="#">
+                            <li>Lifestyle</li>
+                        </a>
+                        <a href="#">
+                            <li>General</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <!-- /categories -->
+
+            <!-- archive "nav" -->
+            <div class="overlay_fs" id="archives_menu">
+                <div class="item_container">
+                    <h5 class="heading">
+                        Archive
+                    </h5>
+                    <ul class="item_ul">
+                        <a href="#">
+                            <li>October 2018</li>
+                        </a>
+                        <a href="#">
+                            <li>August 2018</li>
+                        </a>
+                        <a href="#">
+                            <li>July 2018</li>
+                        </a>
+                        <a href="#">
+                            <li>June 2018</li>
+                        </a>
+                        <a href="#">
+                            <li>February 2018</li>
+                        </a>
+                        <a href="#">
+                            <li>December 2017</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <!-- /archive -->
         </header>
         <div class="hero_common">
 
@@ -67,20 +123,24 @@
         <aside class="sidebar padding_common">
             <div class="sidebar_container">
                 <div class="sidebar_left">
-                    <span class="sidebar_arrow">
-                        <img src="images/right-arrow.png" alt="Arrow icon.">
-                    </span>
-                    <span class="sidebar_text">
-                        Categories
-                    </span>
+                    <a href="#" id="categories">
+                        <span class="sidebar_arrow">
+                            <img src="images/right-arrow.png" alt="Arrow icon.">
+                        </span>
+                        <span class="sidebar_text">
+                            Categories
+                        </span>
+                    </a>
                 </div>
                 <div class="sidebar_right">
-                    <span class="sidebar_arrow">
-                        <img src="images/right-arrow.png" alt="Arrow icon.">
-                    </span>
-                    <span class="sidebar_text">
-                        Archive
-                    </span>
+                    <a href="#" id="archives">
+                        <span class="sidebar_arrow">
+                            <img src="images/right-arrow.png" alt="Arrow icon.">
+                        </span>
+                        <span class="sidebar_text">
+                            Archive
+                        </span>
+                    </a>
                 </div>
             </div>
         </aside>

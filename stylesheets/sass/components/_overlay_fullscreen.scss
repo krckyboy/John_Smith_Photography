@@ -1,0 +1,63 @@
+.overlay_fs {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    transition: all .5s;
+    transform: translateX(-100%);
+    opacity: 0;
+    background-color: rgba($main_color, .95);
+
+    &.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    &_overlay {
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: opacity .5s;
+    }
+
+    .item_container {
+        transition: all .7s;
+        position: relative;
+        @include flex_center_center;
+        z-index: 999;
+
+        .heading {
+            color: $color_light;
+            margin: 1rem;
+            display: block;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            letter-spacing: .3rem;
+            text-align: left;
+            padding-left: 2rem;
+        }
+
+        .item_ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: auto;
+            height: 100vh;
+
+            li {
+                color: $color_light;
+                margin: 1rem;
+                display: block;
+                text-transform: capitalize;
+                font-size: 1.5rem;
+                letter-spacing: .2rem;
+                text-align: left;
+            }
+        }
+    }
+}
+
+// hamburger changes into X

@@ -48,3 +48,18 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin hamburger_transform_to_cross {
+    .bar:nth-child(1) {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    .bar:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(.6rem, -.7rem);
+    }
+}
