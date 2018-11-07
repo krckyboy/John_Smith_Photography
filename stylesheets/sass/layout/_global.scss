@@ -5,6 +5,9 @@
 .padding_common {
     padding: 2rem 2rem;
 }
+.padding_common_bottom {
+    padding-bottom: 2rem;
+}
 
 .padding_bigger {
     padding: 3rem 3rem;
@@ -28,6 +31,10 @@
 .padding_common_left_right {
     padding-left: 2rem;
     padding-right: 2rem;
+}
+.padding_common_and_bot_slightly_bigger {
+    padding: 2rem;
+    padding-bottom: 3rem;
 }
 
 .padding_top_bigger {

@@ -50,6 +50,7 @@ a {
             text-align: center;
             text-transform: uppercase;
         }
+
         .project_text {
             font-size: 1.5rem;
             text-align: center;
@@ -71,10 +72,10 @@ a {
 
             &.nav_active {
                 color: $color_dark;
-        }
+            }
         }
     }
-    
+
     .mobile_nav {
         li {
             color: $color_light;
@@ -84,7 +85,7 @@ a {
             text-align: left;
 
             &.nav_active {
-                    color: $color_dark;
+                color: $color_dark;
             }
         }
     }
@@ -112,11 +113,22 @@ a {
 }
 
 .hero_common {
-    & .hero_headline-container {
+
+    &.blog_post_hero {
+        .hero_headline-container {
+            h1 {
+                .hero_heading-top {
+                    text-transform: initial;
+                }
+            }
+        }
+    }
+    
+    .hero_headline-container {
         color: $color_lightest;
         background-color: rgba($main_color, .8);
 
-        & h1 {
+        h1 {
 
             .hero_heading-top,
             .hero_heading-bottom {
@@ -198,5 +210,52 @@ a {
     .author {
         color: $main_color;
         font-weight: 500;
+    }
+}
+
+.go_back_container {
+   
+    .go_back_text {
+        font-size: $font_slightly_bigger;
+        color: $main_color;
+        letter-spacing: .1rem;
+    }
+} 
+
+.blog_post {
+    .blog_post_sub_heading {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: $font_common;
+    }
+}
+
+
+.comment_section {
+    .title {
+        font-size: $font_big;
+    }
+    .comment_box {
+        .comment_content {
+            .comment_aside {
+                .comment_details {
+                    span {
+                        font-size: $font_common;
+                    }
+                }
+            }
+            .comment_title {
+                font-size: $font_big;
+                font-weight: 600;
+            }
+            .comment_text_box {
+                .comment_text {
+                    font-size: $font_common;
+                }
+            }
+        }
     }
 }

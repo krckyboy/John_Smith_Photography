@@ -32,10 +32,15 @@
     }
 
     // Load more comments
-    .tertiary_button {}
+    .tertiary_button {
+        background-color: $color_text_default;
+        color: $color_lightest;
+        font-size: $font_slightly_smaller;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        border: 1px solid $color_text_default;
+    }
 
-    // Show more for a comment
-    .quaternary_button {}
 }
 
 // Styles for real buttons
@@ -55,8 +60,8 @@
     font-size: $font_bigger;
     text-transform: uppercase;
     font-weight: 400;
-    
-    &:focus{
+
+    &:focus {
         color: $color_text_default;
         outline: none;
         border: none;
