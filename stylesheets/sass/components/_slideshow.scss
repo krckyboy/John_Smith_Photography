@@ -18,6 +18,12 @@
     margin: auto;
 }
 
+.img_container_smaller {
+    height: 25rem;
+    display: flex;
+    margin: auto;
+}
+
 .img_container_bigger {
     position: relative;
     width: 100%;
@@ -40,8 +46,8 @@
 
 .arrow {
     object-fit: cover;
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
     object-position: center center;
     margin: auto;
     opacity: .8;
@@ -89,5 +95,19 @@
         font-size: $font_bigger;
         font-weight: 300;
         letter-spacing: .1rem;
+    }
+}
+
+.slideshow_thumb_container {
+    @include flex_center_center;
+    flex-direction: row;
+    max-width: 100%;
+    margin-top: 2rem;
+    position: relative;
+
+    .slideshow_photo {
+        width: 50%;
+        margin: .5rem;
+        max-height: 100%;
     }
 }

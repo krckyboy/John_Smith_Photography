@@ -1,0 +1,11 @@
+.projects_main {
+    .project_box {
+        .project_text {
+            margin-top: 1rem;
+            @include flex_column_center_start;
+            span {
+                margin: .1rem;
+            }
+        }
+    }
+} 

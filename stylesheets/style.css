@@ -74,6 +74,16 @@ a {
     left: 50%;
     transform: translateX(-50%); }
 
+.projects_main .project_box .project_heading {
+  font-size: 3.3rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+.projects_main .project_box .project_text {
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase; }
+
 .header {
   color: #EEE; }
   .header .logoContainer {
@@ -494,6 +504,9 @@ a {
   align-items: center;
   margin: auto; }
 
+.blogs_hero {
+  background-image: url("../images/daylight-environment-forest-459225.jpg"); }
+
 .cat_menu,
 .arch_menu {
   width: 100%;
@@ -536,6 +549,15 @@ a {
         margin: 2rem;
         display: block; }
 
+.projects_main .project_box .project_text {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; }
+  .projects_main .project_box .project_text span {
+    margin: .1rem; }
+
 .slideshow,
 .slideshow_full_screen {
   position: relative; }
@@ -549,6 +571,11 @@ a {
 
 .img_container {
   height: 30rem;
+  display: flex;
+  margin: auto; }
+
+.img_container_smaller {
+  height: 25rem;
   display: flex;
   margin: auto; }
 
@@ -571,8 +598,8 @@ a {
 
 .arrow {
   object-fit: cover;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   object-position: center center;
   margin: auto;
   opacity: .8; }
@@ -611,6 +638,19 @@ a {
     font-size: 1.9rem;
     font-weight: 300;
     letter-spacing: .1rem; }
+
+.slideshow_thumb_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-width: 100%;
+  margin-top: 2rem;
+  position: relative; }
+  .slideshow_thumb_container .slideshow_photo {
+    width: 50%;
+    margin: .5rem;
+    max-height: 100%; }
 
 .button-like_container {
   display: flex;

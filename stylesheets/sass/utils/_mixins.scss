@@ -48,6 +48,22 @@
     justify-content: center;
     align-items: center;
 }
+@mixin flex_space-between_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex_space-around_center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin flex_column_center_start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
 
 @mixin hamburger_transform_to_cross {
     .bar:nth-child(1) {

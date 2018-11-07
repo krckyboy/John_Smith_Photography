@@ -86,10 +86,12 @@ ut.ready(function () {
     })()
 
     const overlay_fs = (function () {
-        const archives = new overlay_fs_item("archives", "archives_menu", "hamburger");
-        const categories = new overlay_fs_item("categories", "categories_menu", "hamburger");
-        archives.eventListeners();
-        categories.eventListeners();
+        if(document.querySelector(".sidebar")) {
+            const archives = new overlay_fs_item("archives", "archives_menu", "hamburger");
+            const categories = new overlay_fs_item("categories", "categories_menu", "hamburger");
+            archives.eventListeners();
+            categories.eventListeners();
+        }
     }())
 
 

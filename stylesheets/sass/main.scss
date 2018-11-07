@@ -6,14 +6,15 @@
 @import "base/global";
 
 @import "layout/header";     
-@import "layout/global";     
+@import "layout/global";      
 @import "layout/footer";     
 @import "layout/hero";     
 
 @import "pages/home";
 @import "pages/blogs";
+@import "pages/projects"; 
 
-@import "components/slideshow";   
+@import "components/slideshow";    
 @import "components/buttons"; 
 @import "components/blog_thumbnail";
 @import "components/form"; 
