@@ -1,5 +1,5 @@
 .blog_post_hero {
-    background-image: url("/images/35mm-analog-analogue-1002634.jpg");
+    background-image: url("../images/35mm-analog-analogue-1002634.jpg");
 }
 
 .blog_post_main {
@@ -34,8 +34,8 @@
         }
 
         p {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
+            margin-top: 1.3rem;
+            margin-bottom: 1.3rem;
         }
     }
 
@@ -70,21 +70,21 @@
                     align-items: flex-start;
 
                     span {
-                        padding-top: .5rem;
-                        padding-bottom: .5rem;
+                        padding-top: .8rem;
+                        padding-bottom: .8rem;
                     }
                 }
             }
 
             .comment_title {
-                padding-top: .5rem;
-                padding-bottom: .5rem;
+                padding-top: .8rem;
+                padding-bottom: .8rem;
             }
 
             .comment_text_box {
                 .comment_text {
-                    padding-top: .5rem;
-                    padding-bottom: .5rem;
+                    padding-top: .8rem;
+                    padding-bottom: .8rem;
                 }
             }
         }

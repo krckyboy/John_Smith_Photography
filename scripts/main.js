@@ -32,6 +32,7 @@ class overlay_fs_item {
         this.element.addEventListener("click", e => {
             this.toggleVisibility();
             this.toggle_button_adjust();
+            document.body.classList.toggle("overflow_hidden");
         })
 
         this.toggle_button.addEventListener("click", e => {
@@ -54,7 +55,7 @@ class overlay_fs_item {
 }
 
 ut.ready(function () {
-    // Hamburger menu functionality
+    // Hamburger menu functionality and overlay
     const hamburger = (function () {
         const hamDOM = "hamburger";
         const mobile_nav = {
@@ -70,6 +71,7 @@ ut.ready(function () {
                 ut.toggleClassOnAllElements("faded", mobile_nav.overlay, mobile_nav.nav_items)
                 ut.toggleClassOnID(hamDOM, "inactive");
                 ut.toggleClassOnID(mobile_nav.menu, "translate_away");
+                document.body.classList.toggle("overflow_hidden");
             }
         })
     })()
@@ -93,6 +95,5 @@ ut.ready(function () {
             categories.eventListeners();
         }
     }())
-
 
 })

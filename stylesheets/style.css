@@ -199,6 +199,9 @@ a {
 .visible {
   opacity: 1; }
 
+.overflow_hidden {
+  overflow: hidden; }
+
 .translate_away {
   transform: translateX(-100%); }
 
@@ -594,7 +597,7 @@ a {
     margin: .1rem; }
 
 .blog_post_hero {
-  background-image: url("/images/35mm-analog-analogue-1002634.jpg"); }
+  background-image: url("../images/35mm-analog-analogue-1002634.jpg"); }
 
 .blog_post_main .go_back_container {
   display: flex;
@@ -614,8 +617,8 @@ a {
   height: 20rem; }
 
 .blog_post_main .blog_post p {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem; }
 
 .comment_section .comment_box .comment_content .comment_aside {
   display: flex;
@@ -633,16 +636,16 @@ a {
     justify-content: flex-start;
     align-items: flex-start; }
     .comment_section .comment_box .comment_content .comment_aside .comment_details span {
-      padding-top: .5rem;
-      padding-bottom: .5rem; }
+      padding-top: .8rem;
+      padding-bottom: .8rem; }
 
 .comment_section .comment_box .comment_content .comment_title {
-  padding-top: .5rem;
-  padding-bottom: .5rem; }
+  padding-top: .8rem;
+  padding-bottom: .8rem; }
 
 .comment_section .comment_box .comment_content .comment_text_box .comment_text {
-  padding-top: .5rem;
-  padding-bottom: .5rem; }
+  padding-top: .8rem;
+  padding-bottom: .8rem; }
 
 .slideshow,
 .slideshow_full_screen {
