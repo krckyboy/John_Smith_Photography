@@ -38,6 +38,13 @@
             letter-spacing: .3rem;
             text-align: left;
             padding-left: 2rem;
+
+            @include mqMin(37.5em) {
+                font-size: 2rem;
+            }
+            @include mqMin(45em) {
+                font-size: 2.6rem;
+            }
         }
 
         .item_ul {
@@ -55,9 +62,15 @@
                 font-size: 1.5rem;
                 letter-spacing: .2rem;
                 text-align: left;
+
+                @include mqMin(37.5em) {
+                    font-size: 1.8rem;
+                }
+
+                @include mqMin(45em) {
+                    font-size: 2.3rem;
+                }
             }
         }
     }
 }
-
-// hamburger changes into X

@@ -23,9 +23,15 @@
     }
 
     .blog_post {
-        &_sub_heading {}
 
         &_img_cont {
+
+            @include mqMin(53.75em) {
+                width: 76rem; // common container
+                margin: 0 auto;
+                padding: 0 2rem; // padding common
+            }
+
             img {
                 width: 100%;
                 object-fit: cover;
@@ -39,19 +45,24 @@
         }
     }
 
-
-
 }
 
 .comment_section {
-    .title {}
-
+    padding-bottom: 3rem;
     .comment_box {
         .comment_content {
+            @include mqMin(47.5em) {
+                display: flex;
+            }
+
             .comment_aside {
                 display: flex;
                 justify-content: space-between;
                 align-content: flex-start;
+
+                @include mqMin(47.5em) {
+                    flex-direction: column;
+                }
 
                 .author_img_cont {
                     img {
@@ -70,23 +81,39 @@
                     align-items: flex-start;
 
                     span {
-                        padding-top: .8rem;
-                        padding-bottom: .8rem;
+                        padding-top: .15rem;
+                        padding-bottom: .15rem;
                     }
                 }
             }
 
-            .comment_title {
-                padding-top: .8rem;
-                padding-bottom: .8rem;
+            .comment_text_container {
+
+                @include mqMin(47.5em) {
+                    padding-left: 2rem;
+                }
+
+                .comment_title {
+                    padding-top: .5rem;
+                    padding-bottom: .5rem;
+                    @include mqMin(47.5em) {
+                        padding-top: 0;
+                    }
+                }
+
+                .comment_text_box {
+                    .comment_text {
+                        padding-top: .5rem;
+                        padding-bottom: .5rem;
+                    }
+
+                    .button-like_container {
+                        justify-content: flex-start;
+                    }
+                }
+
             }
 
-            .comment_text_box {
-                .comment_text {
-                    padding-top: .8rem;
-                    padding-bottom: .8rem;
-                }
-            }
         }
     }
 }

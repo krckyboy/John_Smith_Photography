@@ -48,16 +48,19 @@
     justify-content: center;
     align-items: center;
 }
+
 @mixin flex_space-between_center {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 @mixin flex_space-around_center {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 @mixin flex_column_center_start {
     display: flex;
     flex-direction: column;
@@ -77,5 +80,32 @@
 
     .bar:nth-child(3) {
         transform: rotate(-45deg) translate(.6rem, -.7rem);
+    }
+}
+
+// -----------------------
+// Media query manager 
+// -----------------------
+
+// **
+// In media queries, you use ems
+// 1em = 16px
+// [600px] = 600 / 16 = 37.5 em
+// **
+
+//600px = 37.5em
+// 500px = 
+//750px = 46.875em
+//960px = 60em
+
+@mixin mqMin($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin mqMax($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
     }
 }

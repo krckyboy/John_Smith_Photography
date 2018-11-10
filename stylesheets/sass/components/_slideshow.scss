@@ -4,7 +4,7 @@
 }
 
 .slideshow {
-    max-width: 60rem;
+    // max-width: 60rem; // instead use container_common class in html
     margin: 0 auto;
 }
 
@@ -16,6 +16,10 @@
     height: 30rem;
     display: flex;
     margin: auto;
+
+    @include mqMin(37.5em) {
+        height: 50rem;
+    }
 }
 
 .img_container_smaller {

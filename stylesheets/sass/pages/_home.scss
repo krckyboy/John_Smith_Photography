@@ -2,24 +2,24 @@
     background:
         linear-gradient(154deg, rgba($main_color, 0.1) 40%, rgba($main_color, 0.4) 81%),
         url("../images/home_hero1.jpg");
- 
-    
+
+
     background-size: cover;
     min-height: 100vh;
     background-position: left center;
     position: relative;
 
-    & .arrow-down {
+    .arrow-down {
         position: absolute;
         display: inline-block;
         bottom: 2rem;
         left: 50%;
         width: 4rem;
         transform: translateX(-50%);
-        animation: nudge_up_down_hero_arrow  2s infinite;
+        animation: nudge_up_down_hero_arrow 2s infinite;
     }
 
-    & .hero_headline-container {
+    .hero_headline-container {
         position: absolute;
         top: 40%;
         left: 50%;
@@ -29,18 +29,18 @@
         justify-content: center;
         align-items: center;
         height: 20rem;
-        
+
         // background-image: linear-gradient(to right bottom, $main_color, $main_color);
         // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         // max-width: 86rem;
-        
+
         // background-image: linear-gradient(105deg, transparent 0%, rgba($main_color, .3) 40%, rgba($main_color, .5) 60%, transparent 100%);
 
-        
+
         h1 {
             transition: opacity 1s;
             padding: 3rem 2rem;
-            margin: auto; 
+            margin: auto;
         }
     }
 }
@@ -48,6 +48,62 @@
 .about {
     background-color: #D4D4D4;
     padding-bottom: 1rem; // to fix the padding because of card translate Y
+
+    .cont_about_1, .cont_about_2 {
+        @include mqMin(37.5em) {
+            max-width: 90%;
+        }
+    }
+
+    .cont_about_1 {
+        @include mqMin(37.5em) {
+            display: flex;
+            position: relative;
+
+            .about_1 {
+                transform: translateY(10%);
+                position: absolute;
+                left: 46%;
+                width: 55%;
+                padding-left: 5rem;
+            }
+
+            .about_img_1 {
+                max-height: 35rem;
+                width: 58%;
+                // transform: translateX(-14%);
+            }
+        }
+    }
+
+
+    .cont_about_2 {
+        @include mqMin(37.5em) {
+            display: flex;
+            position: relative;
+            flex-direction: row-reverse;
+
+            .about_img_2 {
+                max-height: 35rem;
+                width: 51%;
+                transform: translate(22%, -9%);
+                margin-left: 0;
+            }
+
+            .about_2 {
+                transform: translate(28%, 13%);
+                position: absolute;
+                right: 46%;
+                width: 62%;
+                padding-right: 5rem;
+                padding-bottom: 3rem;
+
+                @include mqMin(49.6875em) {
+                    transform: translate(28%, 37%);
+                }
+            }
+        }
+    }
 
     &_img_1,
     &_img_2 {
@@ -60,39 +116,60 @@
         display: block;
     }
 
-    & .about_1,
-    & .about_2 {
+    // the text container
+    .about_1,
+    .about_2 {
         background-color: rgba($main_color, .9);
     }
 
-    & .about_1 {
+    .about_1 {
         transform: translateY(-10%);
     }
 
-    & .about_2 {
+    .about_2 {
         transform: translateY(-10%);
     }
 }
 
 .my_services {
 
-    & .services_container {
+    .services_container {
 
-        & .service_container {
+        @include mqMin(47.5em) {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-content: center;
+            flex-direction: row;
+        }
+
+        .service_container {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            max-width: 30rem;
+
+            @include mqMin(47.5em) {
+                justify-content: flex-start;
+                width: 30%;
+            }
 
             &:not(:last-child) {
                 margin-bottom: $margin_bottom_big;
             }
 
-            & .service_heading {
+            @include mqMin(47.5em) {
+                &:last-child {
+                    margin-bottom: $margin_bottom_big;
+                    margin-top: 0;
+                }
+            }
+
+            .service_heading {
                 margin-bottom: $margin_bottom_mini;
             }
 
-            & .icon_container {
+            .icon_container {
                 margin: auto;
                 margin-bottom: $margin_bottom_mini;
                 background-color: $main_color;
@@ -101,8 +178,10 @@
                 height: 10rem;
                 display: flex;
                 flex-direction: column;
+                margin-top: 0;
 
-                & img {
+
+                img {
                     margin: auto;
                     color: $color_lightest;
                     width: 5rem;
@@ -116,7 +195,7 @@
 .work {
     .work_project_photo {
         @include small_border_radius();
-    } 
+    }
 }
 
 .studio {
@@ -137,30 +216,51 @@
         position: absolute;
         height: 40rem;
 
+        @include mqMin(40.375em) {
+            top: 91%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            height: initial;
+            max-width: 54rem;
+        }
+
+        @include mqMin(40.375em) {
+            max-width: 80rem;
+        }
+
         .studio_box {
-            width: 80%; 
+            width: 80%;
             @include tiny_shadow();
             border: black;
             @include small_border_radius();
-            padding: 3rem 3rem;
+            padding: 2rem 2rem;
             display: inline-block;
             flex-direction: column;
             background-color: $main_color;
             color: $color_lightest;
-            font-size: $font_bigger;
+            font-size: $font_slightly_smaller;
             text-align: center;
 
+            @include mqMin(40.375em) {
+                width: 33%;
+                margin: 1rem;
+                padding: 2rem 3rem;
+            }
+
             &:not(:last-child) {
-                margin-bottom: $margin_bottom_medium;
+                margin-bottom: $margin_bottom_mini;
             }
 
             .top {
-                font-size: $font_bigger;
+                font-size: $font_slightly_bigger;
                 letter-spacing: .6rem;
                 display: block;
                 margin-bottom: 1rem;
             }
-            
+
             .bottom {
                 display: block;
                 font-weight: 300;
@@ -169,4 +269,3 @@
         }
     }
 }
-

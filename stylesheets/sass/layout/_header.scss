@@ -1,5 +1,5 @@
 .header {
-    height: 60px; // making it fixed here so I can manipulate global font size
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +96,7 @@
                 justify-content: center;
                 flex-direction: column;
                 margin: auto;
-                height: calc(100vh - 6rem);
+                height: calc(100vh - 60px); // - header height
                 li {
                     margin: 2rem;
                     display: block;

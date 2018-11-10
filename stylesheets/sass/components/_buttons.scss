@@ -15,7 +15,7 @@
     .primary_button {
         background-color: $main_color;
         color: $color_lightest;
-        font-size: $font_bigger;
+        font-size: $font_slightly_smaller;
         text-transform: uppercase;
         @include tiny_shadow();
 
@@ -57,7 +57,7 @@
     flex-direction: column;
     background-color: $main_color;
     color: $color_lightest;
-    font-size: $font_bigger;
+    font-size: $font_slightly_smaller;
     text-transform: uppercase;
     font-weight: 400;
 

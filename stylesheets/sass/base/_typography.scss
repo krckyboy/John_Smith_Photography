@@ -62,7 +62,7 @@ a {
 .header {
     color: $color_light;
 
-    & .logoContainer {
+    .logoContainer {
         font-size: 1.9rem;
     }
 
@@ -92,20 +92,55 @@ a {
 }
 
 .hero {
-    & .hero_headline-container {
+    .hero_headline-container {
         color: $color_lightest;
 
-        & h1 {
-            & .hero_heading-top {
-                font-size: 4.6rem;
+        h1 {
+            .hero_heading-top {
+                font-size: 3.8rem;
                 font-weight: 400;
                 text-transform: uppercase;
+
+                @include mqMin(21.875em) {
+                    font-size: 4.4rem;
+                }
+                @include mqMin(31.5em) {
+                    font-size: 6rem;
+                }
+                @include mqMin(37.5em) {
+                    font-size: 8rem;
+                }
+                @include mqMin(43em) {
+                    font-size: 10rem;
+                }
+                @include mqMin(52em) {
+                    font-size: 12rem;
+                }
+                @include mqMin(60em) {
+                    font-size: 14rem;
+                }
             }
 
-            & .hero_heading-bottom {
+            .hero_heading-bottom {
                 text-align: right;
                 font-size: 1.4rem;
                 font-weight: 500;
+
+                @include mqMin(21.875em) {
+                    font-size: 1.6em;
+                }
+                @include mqMin(31.5em) {
+                    font-size: 1.8rem;
+                }
+                @include mqMin(37.5em) {
+                    font-size: 2rem;
+                }
+                @include mqMin(43em) {
+                    font-size: 2.2rem;
+                }
+                @include mqMin(52em) {
+                    font-size: 2.4rem;
+                }
 
             }
         }
@@ -123,7 +158,7 @@ a {
             }
         }
     }
-    
+
     .hero_headline-container {
         color: $color_lightest;
         background-color: rgba($main_color, .8);
@@ -139,11 +174,46 @@ a {
                 font-size: 2.6rem;
                 font-weight: 300;
                 text-transform: uppercase;
+                @include mqMin(21.875em) {
+                    font-size: 3rem;
+                }
+                @include mqMin(31.5em) {
+                    font-size: 3.5rem;
+                }
+                @include mqMin(37.5em) {
+                    font-size: 4rem;
+                }
+                @include mqMin(43em) {
+                    font-size: 5rem;
+                }
+                @include mqMin(52em) {
+                    font-size: 5.5rem;
+                }
+                @include mqMin(60em) {
+                    font-size: 6rem;
+                }
+                
             }
 
             .hero_heading-bottom {
                 font-size: 1.4rem;
                 font-weight: 500;
+
+                @include mqMin(21.875em) {
+                    font-size: 1.6em;
+                }
+                @include mqMin(31.5em) {
+                    font-size: 1.8rem;
+                }
+                @include mqMin(37.5em) {
+                    font-size: 2rem;
+                }
+                @include mqMin(43em) {
+                    font-size: 2.2rem;
+                }
+                @include mqMin(52em) {
+                    font-size: 2.4rem;
+                }
             }
         }
     }
@@ -151,13 +221,13 @@ a {
 
 .about {
 
-    & .about_1,
-    & .about_2 {
+    .about_1,
+    .about_2 {
         color: $color_lightest;
         font-size: $font_common;
     }
 
-    & .about_heading {
+    .about_heading {
         font-size: 3.6rem;
         text-transform: uppercase;
     }
@@ -165,36 +235,61 @@ a {
 
 .my_services {
 
-    & .service_heading {
+    .service_heading {
         font-size: 2.5rem;
         text-align: center;
         text-transform: uppercase;
     }
 
-    & .service_text {
+    .service_text {
         font-size: $font_common;
         text-align: center;
     }
 }
 
-.post_box {
-    .content_container {
-        .post_heading {
-            font-size: $font_common;
-            font-weight: 600;
+.posts_container {
+
+
+    @include mqMin(37.5em) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .post_box {
+
+        @include mqMin(37.5em) {
+            width: 48%;
         }
 
-        .post_text {
-            font-size: $font_common;
-        }
-
-        .box_footer {
-            .post_date {
+        .content_container {
+            .post_heading {
                 font-size: $font_common;
+                font-weight: 600;
+
+                @include mqMin(37.5em) {
+                    height: 2.6rem;
+                }
+
+                @include mqMin(45.5.5em) {
+                    height: initial;
+                }
+            }
+
+            .post_text {
+                font-size: $font_common;
+            }
+
+            .box_footer {
+                .post_date {
+                    font-size: $font_common;
+                }
             }
         }
     }
 }
+
 
 .contact {
     .contact_text {
@@ -214,13 +309,13 @@ a {
 }
 
 .go_back_container {
-   
+
     .go_back_text {
         font-size: $font_slightly_bigger;
         color: $main_color;
         letter-spacing: .1rem;
     }
-} 
+}
 
 .blog_post {
     .blog_post_sub_heading {
@@ -238,6 +333,7 @@ a {
     .title {
         font-size: $font_big;
     }
+
     .comment_box {
         .comment_content {
             .comment_aside {
@@ -247,10 +343,12 @@ a {
                     }
                 }
             }
+
             .comment_title {
-                font-size: $font_big;
-                font-weight: 600;
+                font-size: $font_slightly_bigger;
+                font-weight: 500;
             }
+
             .comment_text_box {
                 .comment_text {
                     font-size: $font_common;

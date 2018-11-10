@@ -1,9 +1,9 @@
 .post_box {
 
     &:not(:last-child) {
-        margin-bottom: $margin_bottom_medium;
+        margin-bottom: $margin_bottom_medium_big;
     }
-
+ 
     .post_img_container {
         height: 20rem;
 
@@ -20,18 +20,11 @@
     .content_container {
         @include small_shadow();
 
-        .post_heading {}
-
-        .post_text {}
 
         .box_footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            .button {}
-
-            .post_date {}
         }
     }
 }
