@@ -1,4 +1,28 @@
 .blog_blogs {
+    &.container_common {
+        max-width: 96rem;
+    }
+
+    .posts_container {
+        @include mqMin(37.5em) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .post_box {
+            @include mqMin(37.5em) {
+                width: 48%;
+            }
+
+            @include mqMin(60em) {
+                width: 32%;
+            }
+        }
+
+    }
+
     .arrows {
         position: relative;
         max-width: 50rem;
@@ -11,7 +35,7 @@
 
 
 .blogs_hero {
-    background-image: url("../images/compressed/daylight-environment-forest-459225.jpg");
+    background-image: url("../images/compressed/resized/daylight-environment-forest-459225.jpg");
 }
 
 .cat_menu,

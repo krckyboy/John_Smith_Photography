@@ -48,6 +48,12 @@
     @include small_border_radius_top();
 }
 
+.slideshow_full_screen {
+    .slideshow_photo {
+        border-radius: 0;
+    }
+}
+
 .arrow {
     object-fit: cover;
     height: 4rem;

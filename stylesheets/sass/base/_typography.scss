@@ -27,9 +27,12 @@ a {
 
 .section_heading {
     position: relative;
-    font-size: 2.7rem;
+    font-size: 1.9rem;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: .3rem;
+
 
     &::before {
         content: "";
@@ -46,9 +49,11 @@ a {
 .projects_main {
     .project_box {
         .project_heading {
-            font-size: 3.3rem;
+            font-size: 2.8rem;
             text-align: center;
-            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: .3rem;
+            text-transform: capitalize;
         }
 
         .project_text {
@@ -250,18 +255,7 @@ a {
 .posts_container {
 
 
-    @include mqMin(37.5em) {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-
     .post_box {
-
-        @include mqMin(37.5em) {
-            width: 48%;
-        }
 
         .content_container {
             .post_heading {
@@ -330,6 +324,10 @@ a {
 
 
 .comment_section {
+
+    &.container_common {
+        max-width: 76rem;
+    }
     .title {
         font-size: $font_big;
     }

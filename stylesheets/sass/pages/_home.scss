@@ -1,7 +1,7 @@
 .hero {
     background:
         linear-gradient(154deg, rgba($main_color, 0.1) 40%, rgba($main_color, 0.4) 81%),
-        url("../images/compressed/home_hero1.jpg");
+        url("../images/compressed//resized/home_hero1.jpg");
 
 
     background-size: cover;
@@ -49,7 +49,12 @@
     background-color: #D4D4D4;
     padding-bottom: 1rem; // to fix the padding because of card translate Y
 
-    .cont_about_1, .cont_about_2 {
+    @include mqMin(37.5em) {
+        padding-bottom: 3rem;
+    }
+
+    .cont_about_1,
+    .cont_about_2 {
         @include mqMin(37.5em) {
             max-width: 90%;
         }

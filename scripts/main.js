@@ -33,7 +33,7 @@ ut.ready(function () {
             setTimeout(() => {
                 heroText.style.animation = "moveInLeft .5s linear";
                 heroText.classList.remove("faded");
-            }, 1500);
+            }, 500);
         }())
     })()
 

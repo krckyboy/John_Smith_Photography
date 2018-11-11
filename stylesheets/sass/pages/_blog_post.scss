@@ -1,5 +1,5 @@
 .blog_post_hero {
-    background-image: url("../images/compressed/35mm-analog-analogue-1002634.jpg");
+    background-image: url("../images/compressed/resized/big_35mm-analog-analogue-1002634.jpg");
 }
 
 .blog_post_main {
@@ -27,7 +27,7 @@
         &_img_cont {
 
             @include mqMin(53.75em) {
-                width: 76rem; // common container
+                width: 86rem; // common container
                 margin: 0 auto;
                 padding: 0 2rem; // padding common
             }

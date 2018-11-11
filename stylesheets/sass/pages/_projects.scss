@@ -1,5 +1,7 @@
 .projects_main {
     .project_box {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
         .project_text {
             margin-top: 1rem;
             @include flex_column_center_start;

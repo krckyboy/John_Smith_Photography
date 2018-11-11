@@ -45,10 +45,14 @@
     }
 
     & .logoContainer {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        display: none;
+
+        @include mqMin(37.5em) {
+            display: flex;
+        }
 
         & .logo {
             & .logo_image {

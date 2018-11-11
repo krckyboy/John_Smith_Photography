@@ -11,6 +11,11 @@
         transform: translateX(-50%);
     }
 
+    @include mqMin(37.5em) {
+        margin-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
     .social_icons {
         display: flex;
         justify-content: space-between;

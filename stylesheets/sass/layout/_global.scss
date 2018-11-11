@@ -125,7 +125,7 @@
 // -----------------------------
 
 .container_common {
-    max-width: 76rem; // maybe use pixels or percentages?
+    max-width: 86rem; // maybe use pixels or percentages?
     margin-left: auto;
     margin-right: auto;
 }
@@ -135,3 +135,28 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+// ------------------------
+// whitespace for desktop
+// ------------------------
+
+.about,
+.my_services,
+.work,
+.studio,
+.my_equipment,
+.latest_blogs,
+.contact {
+    @include mqMin(37.5em) {
+        padding-top: 8rem;
+    }
+}
+
+
+.section_heading {
+    @include mqMin(37.5em) {
+        padding-bottom: 5rem;
+    }
+}
+
+
