@@ -21,14 +21,18 @@
 
     .hero_headline-container {
         position: absolute;
-        top: 40%;
+        top: 50%;
         left: 50%;
         width: 100%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         display: flex;
         justify-content: center;
         align-items: center;
         height: 20rem;
+
+        @include mqMin(52em) {
+            top: 40%;
+        }
 
         // background-image: linear-gradient(to right bottom, $main_color, $main_color);
         // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -201,6 +205,143 @@
     .work_project_photo {
         @include small_border_radius();
     }
+
+
+
+    .slideshow {
+        .img_container {
+            img {
+                display: none;
+                border-radius: 0;
+
+                &:first-child {
+                    display: block;
+                }
+
+                @include mqMin(37.5em) {
+                    display: block;
+                    height: 100%;
+                }
+            }
+
+            @include mqMin(37.5em) {
+                // grid
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(3, 15rem);
+                grid-gap: 1rem;
+                height: initial;
+
+                grid-template-areas:
+                    "I-one I-one I-two I-two I-three I-three"
+                    "I-four I-four I-two I-two I-five I-five"
+                    "I-four I-four I-six I-six I-six I-six";;
+
+                img {
+                    &:nth-child(1) {
+                        grid-area: I-one;
+                    }
+
+                    &:nth-child(2) {
+                        grid-area: I-two;
+                    }
+
+                    &:nth-child(3) {
+                        grid-area: I-three;
+                    }
+
+                    &:nth-child(4) {
+                        grid-area: I-four;
+                    }
+
+                    &:nth-child(5) {
+                        grid-area: I-five;
+                    }
+
+                    &:nth-child(6) {
+                        grid-area: I-six;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.my_equipment {
+    .work_project_photo {
+        @include small_border_radius();
+    }
+
+
+
+    .slideshow {
+        .arrows {
+            @include mqMin(37.5em) {
+                display: none;
+            }
+        }
+        .img_container {
+            img {
+                display: none;
+                border-radius: 0;
+
+                &:first-child {
+                    display: block;
+                }
+
+                @include mqMin(37.5em) {
+                    display: block;
+                    height: 100%;
+                }
+            }
+
+            @include mqMin(37.5em) {
+                // grid
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(3, 15rem);
+                grid-gap: 1rem;
+                height: initial;
+
+                grid-template-areas:
+                    "I-one I-one I-two I-two I-three I-three"
+                    "I-four I-four I-two I-two I-five I-five"
+                    "I-four I-four I-six I-six I-six I-six";;
+
+                img {
+                    &:nth-child(1) {
+                        grid-area: I-one;
+                    }
+
+                    &:nth-child(2) {
+                        grid-area: I-two;
+                    }
+
+                    &:nth-child(3) {
+                        grid-area: I-three;
+                    }
+
+                    &:nth-child(4) {
+                        grid-area: I-four;
+                    }
+
+                    &:nth-child(5) {
+                        grid-area: I-five;
+                    }
+
+                    &:nth-child(6) {
+                        grid-area: I-six;
+                    }
+                }
+            }
+        }
+
+        .slideshow_caption {
+            @include mqMin(37.5em) {
+                display: none;
+            }
+        }
+    }
 }
 
 .studio {
@@ -261,7 +402,7 @@
 
             .top {
                 font-size: $font_slightly_bigger;
-                letter-spacing: .6rem;
+                letter-spacing: .3rem;
                 display: block;
                 margin-bottom: 1rem;
             }

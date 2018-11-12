@@ -18,7 +18,7 @@
     margin: auto;
 
     @include mqMin(37.5em) {
-        height: 50rem;
+        height: 35rem;
     }
 }
 
@@ -72,10 +72,16 @@
 
 .arrow_left {
     left: -2rem;
+    @include mqMin(60em) {
+        left: -5rem;
+    }
 }
 
 .arrow_right {
     right: -2rem;
+    @include mqMin(60em) {
+        right: -5rem;
+    }
 }
 
 .slideshow_caption {
@@ -85,26 +91,21 @@
     padding: 2rem 3rem;
     display: block;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: $main_color;
     color: $color_lightest;
 
     text-transform: uppercase;
 
-    .top, .bottom {
+    &_text {
         display: block;
         text-align: center;
-    }
-
-    .top {
         font-size: $font_bigger;
-        letter-spacing: .4rem;
-        margin-bottom: 2rem;
-    }
-
-    .bottom {
-        font-size: $font_bigger;
+        letter-spacing: .3rem;
         font-weight: 300;
         letter-spacing: .1rem;
+        
     }
 }
 

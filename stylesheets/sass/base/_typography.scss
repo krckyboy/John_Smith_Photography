@@ -27,11 +27,11 @@ a {
 
 .section_heading {
     position: relative;
-    font-size: 1.9rem;
+    font-size: 2.1rem;
     text-align: center;
     text-transform: capitalize;
     font-weight: 500;
-    letter-spacing: .3rem;
+    letter-spacing: .1rem;
 
 
     &::before {
@@ -52,7 +52,7 @@ a {
             font-size: 2.8rem;
             text-align: center;
             font-weight: 400;
-            letter-spacing: .3rem;
+            letter-spacing: .2rem;
             text-transform: capitalize;
         }
 
@@ -104,7 +104,7 @@ a {
             .hero_heading-top {
                 font-size: 3.8rem;
                 font-weight: 400;
-                text-transform: uppercase;
+                text-transform: capitalize;
 
                 @include mqMin(21.875em) {
                     font-size: 4.4rem;
@@ -178,7 +178,11 @@ a {
             .hero_heading-top {
                 font-size: 2.6rem;
                 font-weight: 300;
-                text-transform: uppercase;
+                text-transform: capitalize;
+                line-height: 100%;
+                padding-bottom: 1rem;
+                
+                letter-spacing: .1rem;
                 @include mqMin(21.875em) {
                     font-size: 3rem;
                 }
@@ -189,20 +193,20 @@ a {
                     font-size: 4rem;
                 }
                 @include mqMin(43em) {
-                    font-size: 5rem;
+                    font-size: 4.5rem;
                 }
                 @include mqMin(52em) {
-                    font-size: 5.5rem;
+                    font-size: 5rem;
                 }
                 @include mqMin(60em) {
-                    font-size: 6rem;
+                    font-size: 5.5rem;
                 }
                 
             }
 
             .hero_heading-bottom {
                 font-size: 1.4rem;
-                font-weight: 500;
+                font-weight: 400;
 
                 @include mqMin(21.875em) {
                     font-size: 1.6em;
@@ -244,11 +248,14 @@ a {
         font-size: 2.5rem;
         text-align: center;
         text-transform: uppercase;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     .service_text {
         font-size: $font_common;
         text-align: center;
+        line-height: 2.2rem;
     }
 }
 
@@ -273,6 +280,7 @@ a {
 
             .post_text {
                 font-size: $font_common;
+                line-height: 2.2rem;
             }
 
             .box_footer {
@@ -289,6 +297,7 @@ a {
     .contact_text {
         font-size: $font_slightly_bigger;
         text-align: center;
+        line-height: 2.2rem;
     }
 }
 
@@ -319,6 +328,7 @@ a {
 
     p {
         font-size: $font_common;
+        line-height: 2.2rem;
     }
 }
 
@@ -350,6 +360,7 @@ a {
             .comment_text_box {
                 .comment_text {
                     font-size: $font_common;
+                    line-height: 2.2rem;
                 }
             }
         }
