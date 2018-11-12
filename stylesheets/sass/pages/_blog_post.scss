@@ -1,5 +1,14 @@
 .blog_post_hero {
-    background-image: url("../images/compressed/resized/big_35mm-analog-analogue-1002634.jpg");
+    background-image: url("../images/compressed/resized/rsz_big_35mm-analog-analogue-1002634.jpg");
+    
+    @include mqMin(37.5em) {
+        background-image: url("../images/compressed/resized/rsz_1big_35mm-analog-analogue-1002634.jpg");
+    }
+    
+    @include mqMin(60em) {
+        background-image: url("../images/compressed/resized/rsz_2big_35mm-analog-analogue-1002634.jpg");
+        
+    }
 }
 
 .blog_post_main {

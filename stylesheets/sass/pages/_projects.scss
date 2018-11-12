@@ -1,16 +1,124 @@
 .projects_main {
+
+    .container_common {
+        max-width: 120rem;
+    }
+
     .project_box {
         padding-bottom: 2rem;
         padding-top: 2rem;
+
+
         .project_text {
             margin-top: 1rem;
             @include flex_column_center_start;
+
             span {
                 margin: .1rem;
             }
         }
+
+        @include mqMin(60em) {
+            &:not(:last-child) {
+                padding-bottom: 4rem;
+            }
+        }
+
+        .slideshow_thumb_container {
+            img {
+                display: none;
+
+                &:nth-child(-n + 2) {
+                    display: block;
+                }
+            }
+        }
+
+        @include mqMin(37.5em) {
+            .slideshow_thumb_container {
+
+                img {
+                    &:nth-child(-n + 3) {
+                        display: block;
+                    }
+                }
+
+                .slideshow_photo {
+                    width: 33%;
+                }
+            }
+        }
+
+
+        @include mqMin(60em) {
+            .arrows {
+                display: none;
+            }
+
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(6, 9rem);
+
+            grid-template-areas: "mp mp mp mp ph ph ph"
+            "mp mp mp mp st st st"
+            "mp mp mp mp st st st"
+            "mp mp mp mp st st st"
+            "mp mp mp mp st st st"
+            "mp mp mp mp pt pt pt";
+
+            .img_container_smaller {
+                grid-area: mp;
+                .slideshow_photo {
+                    @include small_border_radius();
+                }
+            }
+
+            .project_heading {
+                grid-area: ph;
+            }
+
+            .slideshow_thumb_container {
+                grid-area: st;
+                padding-left: 5rem;
+                padding-right: 5rem;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                flex-direction: column;
+
+                img {
+                    display: block;
+                    border-radius: 0;
+                }
+
+                .slideshow_photo {
+                    width: 50%;
+                }
+            }
+
+            .project_text {
+                grid-area: pt;
+                padding-left: 5rem;
+                justify-content: flex-end;
+            }
+
+            .project_heading {
+                padding-top: 0;
+            }
+
+            .img_container_smaller {
+                height: 100%;
+            }
+
+        }
+
+        // mp - main photo
+        // ph - project heading
+        // st - slideshow thumbnails
+        // pt - project text
+
+
         &:last-child {
             padding-bottom: 3rem;
         }
     }
-} 
+}

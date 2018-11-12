@@ -1,10 +1,21 @@
 // for blogs, projects, blog posts
 .hero_common {
-    background: url("../images/compressed/resized/blogs_hero.jpg");
+    background-image: url("../images/compressed/resized/rsz_blogs_hero (1).jpg");
     background-size: cover;
     min-height: 50vh;
-    background-position: left center; 
+    background-position: left center;
     position: relative;
+    background-repeat: no-repeat;
+
+    @include mqMin(37.5em) {
+        background-image: url("../images/compressed/resized/rsz_1blogs_hero.jpg");
+        background-position: center left;
+    }
+
+    @include mqMin(60em) {
+        background-image: url("../images/compressed/resized/rsz_2blogs_hero.jpg");
+        background-position: center;
+    }
 
     & .hero_headline-container {
         position: absolute;
@@ -19,7 +30,7 @@
 
         h1 {
             transition: opacity 1s;
-            margin: auto; 
+            margin: auto;
         }
     }
 }

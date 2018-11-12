@@ -206,6 +206,12 @@
         @include small_border_radius();
     }
 
+    @include mqMin(37.5em) {
+        .arrows {
+            display: none;
+        }
+    }
+
 
 
     .slideshow {
@@ -225,6 +231,7 @@
             }
 
             @include mqMin(37.5em) {
+
                 // grid
                 display: grid;
                 grid-template-columns: repeat(6, 1fr);
