@@ -1,7 +1,7 @@
 .projects_main {
 
     .container_common {
-        max-width: 120rem;
+        max-width: 150rem;
     }
 
     .project_box {
@@ -24,42 +24,113 @@
             }
         }
 
-        .slideshow_thumb_container {
-            img {
-                display: none;
-
-                &:nth-child(-n + 2) {
-                    display: block;
-                }
+        .img_container_smaller {
+            .slideshow_photo {
+                transition: opacity .5s;
             }
         }
 
-        @include mqMin(37.5em) {
-            .slideshow_thumb_container {
+        .slideshow_thumb_container {
+            .arrows {
+                cursor: pointer;
+            }
 
-                img {
-                    &:nth-child(-n + 3) {
-                        display: block;
-                    }
+            .slideshow_photo {
+                cursor: pointer;
+                position: relative;
+                
+                transition: opacity 1s, padding .2s;
+                &.faded {
+                    pointer-events: none;
                 }
+
+                &:hover {
+                    padding: .3rem;
+                }
+            }
+
+            @include mqMax(60em) {
+
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(1, 11rem);
+                grid-template-areas:
+                    "one two three";
 
                 .slideshow_photo {
-                    width: 33%;
+                    opacity: 0;
+                    width: 100%;
+                    padding: .5rem;
+                    margin: 0;
+
+                    &:nth-child(odd) {
+                        grid-area: one;
+                    }
+
+                    &:nth-child(even) {
+                        grid-area: two;
+                    }
+
+                    &:nth-child(3n) {
+                        grid-area: three;
+                    }
+
+                    &:nth-child(-n + 3) {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            @include mqMax(37.5em) {
+                // height: 11rem;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(1, 11rem);
+
+                grid-template-areas:
+                    "one two";
+
+                .slideshow_photo {
+                    width: 100%;
+                    opacity: 0;
+
+                    &:nth-child(odd),
+                    &:nth-child(even) {
+                        opacity: 0;
+                    }
+
+                    &:nth-child(odd) {
+                        grid-area: one;
+                    }
+
+                    &:nth-child(even) {
+                        grid-area: two;
+                    }
+
+                    &:nth-child(-n + 2) {
+                        opacity: 1;
+                    }
                 }
             }
         }
+
 
 
         @include mqMin(60em) {
+            .slideshow_thumb_container {
+                display: flex;
+            }
+
             .arrows {
                 display: none;
             }
 
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            grid-template-rows: repeat(6, 9rem);
+            grid-template-rows: repeat(7, 9rem);
 
             grid-template-areas: "mp mp mp mp ph ph ph"
+            "mp mp mp mp st st st"
             "mp mp mp mp st st st"
             "mp mp mp mp st st st"
             "mp mp mp mp st st st"
@@ -68,6 +139,7 @@
 
             .img_container_smaller {
                 grid-area: mp;
+
                 .slideshow_photo {
                     @include small_border_radius();
                 }
@@ -88,6 +160,7 @@
                 img {
                     display: block;
                     border-radius: 0;
+                    opacity: 1;
                 }
 
                 .slideshow_photo {

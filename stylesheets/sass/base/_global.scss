@@ -1,9 +1,9 @@
 .faded {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .visible {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .overflow_hidden {
@@ -22,3 +22,25 @@
     @include hamburger_transform_to_cross;
 }
 
+.activeThumbPic {
+    border: .2rem $main_color solid;
+    padding: .3rem;
+}
+
+#scrollUp {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    padding: .5rem;
+    background-color: $main_color;
+    z-index: 99;
+    transition: opacity 1s;
+    opacity: 0;
+    cursor: pointer;
+    img {
+        width: 3rem;
+        height: 3rem;
+        transform: rotate(180deg);
+        pointer-events: none; // to avoid event target conflict
+    }
+}

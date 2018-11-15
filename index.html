@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/external/aos.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <title>John Smith | Photography</title>
 </head>
 
-<body>
-    <div class="app">
+<body id="home">
+    <div class="app" id="app">
+        <span id="scrollUp"><img src="images/down-arrow.svg" alt=""></span>
         <header class="header">
             <div class="header_container container_common">
                 <div class="logoContainer">
@@ -56,15 +58,15 @@
                 </h1>
             </div>
 
-            <img class="arrow-down" src="images/down-arrow.svg" alt="Scroll down">
+            <img class="arrow-down" src="images/down-arrow.svg" id="scrollDown" alt="Scroll down">
         </div>
 
-        <section class="about padding_common">
+        <section class="about padding_common" id="aboutSection">
             <div class="container_common">
-                <div class="cont_about_1">
+                <div class="cont_about_1" data-aos-once="true" data-aos="zoom-in">
                     <img class="about_img_1" src="images/compressed/resized/black-and-white-fun-happy-91227.jpg" alt="Picture of me smiling, grayscale.">
                     <div class="padding_common_left_right">
-                        <div class="about_1 padding_bigger">
+                        <div class="about_1 padding_bigger" >
                             <div class="about_heading margin_common_bottom">
                                 <h2>About #1</h2>
                             </div>
@@ -78,11 +80,11 @@
                     </div>
 
                 </div>
-                <div class="cont_about_2">
+                <div class="cont_about_2" data-aos-once="true" data-aos="zoom-in">
                     <img class="about_img_2" src="images/compressed/resized/adult-back-view-beach-962290.jpg" alt="Picture of me taking a photo in the sunset.">
                     <div class="padding_common_left_right">
-                        <div class="about_2 padding_bigger">
-                            <div class="about_heading margin_common_bottom">
+                        <div class="about_2 padding_bigger" >
+                            <div class="about_heading margin_common_bottom" >
                                 <h2>About #2</h2>
                             </div>
                             <div class="about_text">
@@ -103,11 +105,11 @@
             </div>
         </section>
 
-        <section class="my_services padding_common">
+        <section class="my_services padding_common" data-aos-once="true" data-aos="zoom-in">
             <div class="container_common">
-                <h2 class="section_heading padding_bigger">My Services</h2>
+                <h2 class="section_heading padding_bigger" >My Services</h2>
                 <div class="services_container container_common">
-                    <div class="service_container">
+                    <div class="service_container" >
                         <div class="icon_container">
                             <img src="images/photo-camera.svg" alt="Photo shooting icon.">
                         </div>
@@ -116,7 +118,7 @@
                             event, architectural, and of course landscape photography.
                         </p>
                     </div>
-                    <div class="service_container">
+                    <div class="service_container" >
                         <div class="icon_container">
                             <img src="images/image.svg" alt="Editing icon.">
                         </div>
@@ -126,7 +128,7 @@
                             your choice or myself made.
                         </p>
                     </div>
-                    <div class="service_container">
+                    <div class="service_container" >
 
                         <div class="icon_container">
                             <img src="images/printer.svg" alt="Printing icon.">
@@ -143,21 +145,21 @@
 
         </section>
 
-        <section class="work padding_common container_common">
-            <h2 class="section_heading padding_bigger">A glimpse of my work</h2>
-            <div class="slideshow">
+        <section class="work padding_common container_common" data-aos-once="true" data-aos="zoom-in">
+            <h2   class="section_heading padding_bigger">A glimpse of my work</h2>
+            <div class="slideshow padding_common_top_bottom">
                 <div class="img_container">
                     <img class="work_project_photo slideshow_photo" src="images/compressed/resized/alone-camera-clouds-985691.jpg"
                         alt="Project image">
-                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/alone-camera-clouds-985691.jpg"
+                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/projects/max-di-capua-976370-unsplash-min.jpg"
                         alt="Project image">
-                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/alone-camera-clouds-985691.jpg"
+                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/projects/darkroomsg-489417-unsplash-min.jpg"
                         alt="Project image">
-                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/alone-camera-clouds-985691.jpg"
+                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/projects/bogdan-glisik-780672-unsplash-min.jpg"
                         alt="Project image">
-                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/alone-camera-clouds-985691.jpg"
+                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/projects/andre-benz-240213-unsplash-min.jpg"
                         alt="Project image">
-                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/alone-camera-clouds-985691.jpg"
+                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/projects/erik-witsoe-630944-unsplash-min.jpg"
                         alt="Project image">
 
                 </div>
@@ -168,28 +170,32 @@
             </div>
 
             <div class="button-like_container padding_common">
-                <a href="#" class="button primary_button">See all projects</a>
+                <a href="blog_post.html" class="button primary_button">See all projects</a>
             </div>
         </section>
 
-        <section class="studio padding_common_top_bottom">
-            <h2 class="section_heading padding_bigger">My studio</h2>
+        <section class="studio padding_common_top_bottom" data-aos-once="true" data-aos="zoom-in">
+            <h2   class="section_heading padding_bigger">My studio</h2>
 
-            <div class="slideshow_full_screen studio_wrapper">
+            <div class="slideshow_full_screen studio_wrapper" >
                 <div class="img_container_bigger">
                     <img class="work_project_photo slideshow_photo" id="studio_image" src="images/compressed/resized/alexander-dummer-124674-unsplash_1.jpg"
                         alt="Image of my studio">
+                    <img class="work_project_photo slideshow_photo" id="studio_image" src="images/compressed/resized/rsz_parking-parking-lot-underground-garage-2996.jpg"
+                        alt="Image of the parking">
+                    <img class="work_project_photo slideshow_photo" id="studio_image" src="images/compressed/resized/rsz_15120-architecture-blue-269077.jpg"
+                        alt="Image of the parking">
                 </div>
-                <div class="studio_boxes">
-                    <div class="studio_box">
+                <div class="studio_boxes"data-aos-once="true" data-aos="zoom-in">
+                    <div class="studio_box" >
                         <h3 class="top">SPACE</h3>
                         <span class="bottom">300 square feet</span>
                     </div>
-                    <div class="studio_box">
+                    <div class="studio_box" >
                         <h3 class="top">LOCATION</h3>
                         <span class="bottom">4818 Rose St Houston, TX 77007</span>
                     </div>
-                    <div class="studio_box">
+                    <div class="studio_box" >
                         <h3 class="top">PERKS</h3>
                         <span class="bottom">Free Parking</span>
                     </div>
@@ -197,25 +203,27 @@
             </div>
         </section>
 
-        <section class="my_equipment padding_common margin_top_for_equipment container_common">
-            <h2 class="section_heading padding_bigger">My equipment</h2>
-            <div class="slideshow">
+        <section class="my_equipment padding_common margin_top_for_equipment container_common" data-aos-once="true" data-aos="zoom-in" id="myEquipment">
+            <h2   class="section_heading padding_bigger">My equipment</h2>
+            <div class="slideshow" >
                 <div class="img_container">
-                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/diana-macesanu-488916-unsplash.jpg"
+                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/my_equipment/aaron-huber-740843-unsplash-min.jpg"
                         alt="Project image">
-                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/diana-macesanu-488916-unsplash.jpg"
+                        <img class="work_project_photo slideshow_photo" src="images/compressed/resized/my_equipment/jakob-owens-246558-unsplash.jpg"
                         alt="Project image">
-                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/diana-macesanu-488916-unsplash.jpg"
+                        <img class="work_project_photo slideshow_photo" src="images/compressed/resized/my_equipment/ruben-menarguez-674723-unsplash-min.jpg"
                         alt="Project image">
-                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/diana-macesanu-488916-unsplash.jpg"
-                        alt="Project image">
-                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/diana-macesanu-488916-unsplash.jpg"
-                        alt="Project image">
-                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/diana-macesanu-488916-unsplash.jpg"
+                        <img class="work_project_photo slideshow_photo" src="images/compressed/resized/my_equipment/diana-macesanu-488916-unsplash.jpg"
+                            alt="Project image">
+                    <img class="work_project_photo slideshow_photo" src="images/compressed/resized/my_equipment/tripod-min.jpg"
                         alt="Project image">
                 </div>
                 <div class="slideshow_caption">
-                    <span class="slideshow_caption_text">Mavic Pro drone</span>
+                    <span class="slideshow_caption_text">Minolta lenses</span>
+                    <span class="slideshow_caption_text">Nikon</span>
+                    <span class="slideshow_caption_text">MacBook Pro</span>
+                    <span class="slideshow_caption_text">Mavic Pro Drone</span>
+                    <span class="slideshow_caption_text">Yenter Tripod</span>
                 </div>
                 <div class="arrows">
                     <img class="go_back arrow arrow_left" src="images/compressed/back.png" alt="Previous image">
@@ -224,77 +232,95 @@
             </div>
         </section>
 
-        <section class="latest_blogs padding_common container_common">
-            <h2 class="section_heading padding_bigger">Latest blog posts</h2>
+        <section class="latest_blogs padding_common container_common" data-aos-once="true" data-aos="zoom-in"> 
+            <h2   class="section_heading padding_bigger">Latest blog posts</h2>
             <div class="posts_container">
-                <div class="post_box">
-                    <div class="post_img_container">
-                        <img src="images/compressed/resized/jakob-owens-246558-unsplash.jpg" alt="Blog post image.">
-                    </div>
-                    <div class="content_container padding_common">
-                        <h4 class="post_heading">Nikon D330 review</h4>
-                        <p class="post_text padding_common_top_bottom">Lorem ipsum dolor sit amet consectetur
-                            adipisicing
-                            elit. Quod voluptatem delectus incidunt, veniam sed neque maiores quos recusandae similique
-                            dicta non, aspernatur facilis dolores error alias expedita distinctio aliquam explicabo.</p>
-                        <div class="box_footer">
-                            <div class="button-like_container padding_smaller_top_bottom">
-                                <a href="#" class="button secondary_button">READ MORE</a>
+                <div class="post_box" data-aos-once="true" data-aos="zoom-in">
+                    <a href="blog_post.html">
+                        <div class="post_img_container">
+                            <img src="images/compressed/resized/jakob-owens-246558-unsplash.jpg" alt="Blog post image.">
+                        </div>
+                    </a>
+                        <div class="content_container padding_common">
+                                <a href="blog_post.html">
+                            <h4 class="post_heading">
+                                Nikon D330 review</h4>
+                                </a>
+                            <p class="post_text padding_common_top_bottom">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Quod voluptatem delectus incidunt, veniam sed neque maiores quos recusandae similique
+                                dicta non, aspernatur facilis dolores error alias expedita distinctio aliquam explicabo.</p>
+                            <div class="box_footer">
+                                <div class="button-like_container padding_smaller_top_bottom">
+                                    <a href="blog_post.html" class="button secondary_button">READ MORE</a>
+                                </div>
+                                <span class="post_date">10/14/2018</span>
                             </div>
-                            <span class="post_date">10/14/2018</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="post_box">
+
+                <div class="post_box" data-aos-once="true" data-aos="zoom-in">
+                        <a href="blog_post.html">
                     <div class="post_img_container">
                         <img src="images/compressed/resized/35mm-analog-analogue-1002634.jpg" alt="Blog post image.">
                     </div>
+                    </a>
                     <div class="content_container padding_common">
+                            <a href="blog_post.html">
                         <h4 class="post_heading">What do you need as a photographer?</h4>
+                        </a>
                         <p class="post_text padding_common_top_bottom">Lorem ipsum dolor sit amet consectetur
                             adipisicing
                             elit. Quod voluptatem delectus incidunt, veniam sed neque maiores quos recusandae similique
                             dicta non, aspernatur facilis dolores error alias expedita distinctio aliquam explicabo.</p>
                         <div class="box_footer">
                             <div class="button-like_container padding_smaller_top_bottom">
-                                <a href="#" class="button secondary_button">READ MORE</a>
+                                <a href="blog_post.html" class="button secondary_button">READ MORE</a>
                             </div>
                             <span class="post_date">10/14/2018</span>
                         </div>
                     </div>
                 </div>
-                <div class="post_box">
+                <div class="post_box" data-aos-once="true" data-aos="zoom-in">
+                        <a href="blog_post.html">
                     <div class="post_img_container">
                         <img src="images/compressed/resized/cvdop-limbocker-973689-unsplash.jpg" alt="Blog post image.">
                     </div>
+                    </a>
                     <div class="content_container padding_common">
+                            <a href="blog_post.html">
                         <h4 class="post_heading">The basics of photography</h4>
+                        </a>
                         <p class="post_text padding_common_top_bottom">Lorem ipsum dolor sit amet consectetur
                             adipisicing
                             elit. Quod voluptatem delectus incidunt, veniam sed neque maiores quos recusandae similique
                             dicta non, aspernatur facilis dolores error alias expedita distinctio aliquam explicabo.</p>
                         <div class="box_footer">
                             <div class="button-like_container padding_smaller_top_bottom">
-                                <a href="#" class="button secondary_button">READ MORE</a>
+                                <a href="blog_post.html" class="button secondary_button">READ MORE</a>
                             </div>
                             <span class="post_date">10/14/2018</span>
                         </div>
                     </div>
                 </div>
-                <div class="post_box">
+                <div class="post_box" data-aos-once="true" data-aos="zoom-in">
+                        <a href="blog_post.html">
                     <div class="post_img_container">
                         <img src="images/compressed/resized/anant-jain-471051-unsplash.jpg" alt="Blog post image.">
                     </div>
+                    </a>
                     <div class="content_container padding_common">
+                            <a href="blog_post.html">
                         <h4 class="post_heading">How to prepare for bad weather?</h4>
+                        </a>
                         <p class="post_text padding_common_top_bottom">Lorem ipsum dolor sit amet consectetur
                             adipisicing
                             elit. Quod voluptatem delectus incidunt, veniam sed neque maiores quos recusandae similique
                             dicta non, aspernatur facilis dolores error alias expedita distinctio aliquam explicabo.</p>
                         <div class="box_footer">
                             <div class="button-like_container padding_smaller_top_bottom">
-                                <a href="#" class="button secondary_button">READ MORE</a>
+                                <a href="blog_post.html" class="button secondary_button">READ MORE</a>
                             </div>
                             <span class="post_date">10/14/2018</span>
                         </div>
@@ -302,15 +328,15 @@
                 </div>
             </div>
 
-            <div class="button-like_container padding_common">
-                <a href="blogs.html" class="button primary_button">See all blog posts</a>
+            <div class="button-like_container padding_common" >
+                <a href="blogs.html" class="button primary_button" >See all blog posts</a>
             </div>
 
         </section>
 
-        <section class="contact padding_common container_common container_max_small">
-            <h2 class="section_heading padding_bigger">Contact</h2>
-            <p class="contact_text">If you're interested in hiring me or if you'd like to ask questions, don't hesitate
+        <section class="contact padding_common container_common container_max_small" data-aos-once="true" data-aos="zoom-in">
+            <h2   class="section_heading padding_bigger">Contact</h2>
+            <p class="contact_text" >If you're interested in hiring me or if you'd like to ask questions, don't hesitate
                 and use the form below to reach out to me. I'm very responsive to e-mails so I'll make sure to get back
                 to you as soon as possible!</p>
             <form action="#" class="form padding_medium_top_bottom">
@@ -339,6 +365,7 @@
             </div>
         </footer>
     </div>
+    <script src="scripts/external/aos.js"></script>
     <script src="scripts/main.js" type="module"></script>
 </body>
 

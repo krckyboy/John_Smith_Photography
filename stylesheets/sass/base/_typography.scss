@@ -76,7 +76,7 @@ a {
             font-size: 2rem;
 
             &.nav_active {
-                color: $color_dark;
+                font-weight: 600;
             }
         }
     }
@@ -90,7 +90,7 @@ a {
             text-align: left;
 
             &.nav_active {
-                color: $color_dark;
+                font-weight: 600;
             }
         }
     }
@@ -265,6 +265,9 @@ a {
     .post_box {
 
         .content_container {
+            a {
+                color: $color_text_default;
+            }
             .post_heading {
                 font-size: $font_common;
                 font-weight: 600;

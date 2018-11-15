@@ -4,6 +4,20 @@
     justify-content: center;
     align-items: center;
 
+    a {
+        transition: transform .2s;
+    }
+
+
+    a:hover {
+        transform: translateY(-4px);
+    }
+
+    a:focus,
+    a:active {
+        transform: translateY(2px);
+    }
+
     .button {
         border: black;
         @include small_border_radius();
@@ -65,9 +79,22 @@
     font-weight: 500;
     cursor: pointer;
 
+
+        transition: transform .2s;
+
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    &:focus,
+    &:active {
+        transform: translateY(2px);
+    }
+
     &:focus {
-        color: $color_text_default;
+        // color: $color_text_default;
         outline: none;
-        border: none;
+        // border: none;
     }
 }

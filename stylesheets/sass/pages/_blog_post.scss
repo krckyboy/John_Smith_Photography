@@ -12,6 +12,10 @@
 }
 
 .blog_post_main {
+
+    .container_common {
+        max-width: 86rem;
+    }
     .go_back_container {
         display: flex;
         align-items: center;
